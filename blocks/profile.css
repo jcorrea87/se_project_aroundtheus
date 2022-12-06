@@ -1,0 +1,47 @@
+.profile{
+  color: #FFFFFF;
+  display:block;
+  margin: 105px 0 0 30px;
+}
+
+.profile__name{
+  font-family: "Inter", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 42px;
+  line-height: 1.1;
+  margin: 0;
+}
+.profile__title{
+  font-family: "Inter", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.2;
+  margin: 16px 0 0 0;
+}
+.profile__pencil{
+  width: 10px;
+  height: 10px;
+  position: relative;
+  left: 7px;
+  bottom: 7px;
+}
+
+.profile__square{
+  position: relative;
+  width: 24px;
+  height: 24px;
+  top:0;
+  right: 21px;
+}
+
+.profile__add-button-box{
+  position: relative;
+  padding: 11px 0 0 35px;
+}
+
+.profile__add-button-plus{
+  position: relative;
+  top:1px;
+  right:121px;
+  padding: 11px 0 0 35px;
+}

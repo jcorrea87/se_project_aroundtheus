@@ -1,0 +1,83 @@
+.card-wrapper{
+  display:grid;
+  grid-template-columns: 282px 282px 282px;
+  grid-template-rows: 361px 361px;
+  grid-row-gap: 20px;
+  grid-column-gap:17px;
+  grid-template-areas:
+    "yosemite lake bald"
+    "latemar vanoise lago";
+}
+
+.card{
+    margin-top:47.25px;
+    margin-left:200px;
+}
+
+.card__picture{
+    width:282px;
+    height:282px;
+    border-radius: 10px 10px 0 0;
+    display:flex;
+}
+
+.card__caption{
+    width:282px;
+    height:79px;
+    background-color: #FFFFFF;
+    padding: 0;
+    box-sizing: border-box;
+    border-radius: 0 0 10px 10px;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card__heading{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-family: "Inter", "Arial", sans-serif;
+    font-weight: 900;
+    font-size:24px;
+    line-height:1.2;
+    text-align: center;
+    align-items: center;
+    padding: 6px 0 0 20px;
+}
+
+.card__button{
+    flex-shrink: 0;
+    width:21px;
+    height:18px;
+    margin-right: 20px;
+    margin-top: 32px;
+    align-content:center;
+    background-color: #FFFFFF;
+    border: none;
+    background-image: url(./images/Vector-1.svg);
+}
+
+.card__yosemite{
+    grid-area: yosemite;
+}
+
+.card__lake{
+    grid-area: lake;
+}
+
+.card__bald{
+    grid-area: bald;
+}
+
+.card__latemar{
+    grid-area: latemar;
+}
+
+.card__vanoise{
+    grid-area: vanoise;
+}
+
+.card__lago{
+    grid-area: lago;
+}

@@ -1,0 +1,18 @@
+.header__logo{
+  padding: 45px 0 41px 200px;
+}
+
+.header__horizontal-row{
+  border: 1px solid#545454;
+  opacity: .7;
+  width: 880px;
+  margin: 0 0 0 200px;
+}
+
+.header__profile-container{
+  display: flex;
+}
+.header__profile-picture{
+  margin: 36.25px 0 0 200px;
+  border-radius: 50%;
+}

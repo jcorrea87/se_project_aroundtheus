@@ -8,52 +8,71 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./pages/index.css">
+    <link rel="icon" type="image" href="favicon.ico">
 </head>
 <body>
     <div class="page">
         <header class="header">
-           <img class="header__logo" src="HeaderIcon.svg" alt="Icon that says around the US">
+           <img class="header__logo" src="./images/header-icon.svg" alt="Icon that says around the US">
            <hr class="header__horizontal-row">
           <div class="header__profile-container">
-           <img class="header__profile-picture" src="jacques-cousteau.jpg" alt="Picture of Jacques Cousteau">
+           <img class="header__profile-picture" src="./images/jacques-cousteau-min.jpg" alt="Picture of Jacques Cousteau">
            <div class="profile">
-            <h1 class="name">Jacques Cousteau <img class="pencil" src="Vector((1)).svg" alt="pencil shaped icon"> <img class="square" src="Rectangle.svg" alt="square shaped icon"></h1>
-            <p class="title">Explorer</p>
+            <h1 class="profile__name">Jacques Cousteau <img class="profile__pencil" src="./images/pencil.svg" alt="pencil shaped icon"> <img class="profile__square" src="./images/square.svg" alt="square shaped icon"></h1>
+            <p class="profile__title">Explorer</p>
            </div>
-           <img class="add-button-box" src="Rectangle(1).svg" alt="rectangle shaped icon"><img class="add-button-plus" src="Vector(1).svg" alt="plus shaped icon">
+           <img class="profile__add-button-box" src="./images/rectangle.svg" alt="rectangle shaped icon"><img class="profile__add-button-plus" src="./images/plus.svg" alt="plus shaped icon">
           </div>
         </header>
         <main class="cards">
             <div class="card-wrapper">
-                <figure class="card yosemite">
-                    <img class="card__picture" src="yosemite-valley.jpg" alt="river running through a forest with a mountain in the background">
-                    <figcaption class="card__caption">Yosemite Valley<img class="card__icon" src="Vector-1.svg" alt="heart shaped icon"></figcaption>
+                <figure class="card card__yosemite">
+                    <img class="card__picture" src="./images/yosemite-valley-min.jpg" alt="river running through a forest with a mountain in the background">
+                    <figcaption class="card__caption">
+                        <h2 class="card__heading">Yosemite Valley</h2>
+                        <button class="card__button" type="button"></button>
+                    </figcaption>
                 </figure>
-                <figure class="card lake">
-                    <img class="card__picture" src="lake-louise.png" alt="lake with mountains in the background">
-                    <figcaption class="card__caption">Lake Louise<img class="card__icon" src="Vector-1.svg" alt="heart shaped icon"></figcaption>
+                <figure class="card card__lake">
+                    <img class="card__picture" src="./images/lake-louise-min.jpg" alt="lake with mountains in the background">
+                    <figcaption class="card__caption">
+                        <h2 class="card__heading">Lake Louise</h2>
+                        <button class="card__button" type="button"></button>
+                    </figcaption>
                 </figure>
-                <figure class="card bald">
-                    <img class="card__picture" src="bald-mountains.png" alt="mountains with sunrise in the background">
-                    <figcaption class="card__caption">Bald Mountains<img class="card__icon" src="Vector-1.svg" alt="heart shaped icon"></figcaption>
+                <figure class="card card__bald">
+                    <img class="card__picture" src="./images/bald-mountains-min.jpg" alt="mountains with sunrise in the background">
+                    <figcaption class="card__caption">
+                        <h2 class="card__heading">Bald Mountains</h2>
+                        <button class="card__button" type="button"></button>
+                    </figcaption>
                 </figure>
-                <figure class="card latemar">
-                    <img class="card__picture" src="latemar.png" alt="mountain at night with stars">
-                    <figcaption class="card__caption">Latemar<img class="card__icon" src="Vector-1.svg" alt="heart shaped icon"></figcaption>
+                <figure class="card card__latemar">
+                    <img class="card__picture" src="./images/latemar-min.jpg" alt="mountain at night with stars">
+                    <figcaption class="card__caption">
+                        <h2 class="card__heading">Latemar</h2>
+                        <button class="card__button" type="button"></button>
+                    </figcaption>
                 </figure>
-                <figure class="card vanoise">
-                    <img class="card__picture" src="vanoise-national-park.png" alt="lake in front of mountains">
-                    <figcaption class="card__caption card__caption-vanoise">Vanoise National Park<img class="card__icon-vanoise" src="Vector-1.svg" alt="heart shaped icon"></figcaption>
+                <figure class="card card__vanoise">
+                    <img class="card__picture" src="./images/vanoise-national-park-min.jpg" alt="lake in front of mountains">
+                    <figcaption class="card__caption">
+                        <h2 class="card__heading">Vanoise National Park</h2>
+                        <button class="card__button" type="button"></button>
+                    </figcaption>
                 </figure>
-                <figure class="card lago">
-                    <img class="card__picture" src="lago-di-braies.png" alt="boats on a lake in front of mountains">
-                    <figcaption class="card__caption">Lago di Braes<img class="card__icon" src="Vector-1.svg" alt="heart shaped icon"></figcaption>
+                <figure class="card card__lago">
+                    <img class="card__picture" src="./images/lago-di-braies-min.jpg" alt="boats on a lake in front of mountains">
+                    <figcaption class="card__caption">
+                        <h2 class="card__heading">Lago di Braies</h2>
+                        <button class="card__button" type="button"></button>
+                    </figcaption>
                 </figure>
             </div>
         </main>
         <footer class="footer">
-            <p class="copyright">&copy;2022 Around The U.S.</p>
+            <p class="footer__copyright">&copy;2022 Around The U.S.</p>
         </footer>
     </div>
 </body>

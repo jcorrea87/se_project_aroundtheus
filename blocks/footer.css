@@ -3,8 +3,16 @@
   padding-left: 200px;
   padding-bottom: 60px;
   color: #545454;
+  background-color: #000000;
   font-family: "Inter", "Alias", sans-serif;
   font-weight: 400;
   font-size:18px;
   line-height: 1.21;
+  margin:0;
+}
+
+@media screen and (max-width: 546px){
+  .footer__copyright{
+    padding-left: 19px;
+  }
 }

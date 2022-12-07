@@ -1,47 +1,100 @@
+@font-face{
+  font-family: "Inter-Medium";
+  src: url(../fonts/Inter-Medium.woff2);
+}
+@font-face{
+  font-family: "Inter-Regular";
+  src: url(../fonts/Inter-Regular.woff2);
+}
 .profile{
+  display: flex;
+}
+
+.profile__picture{
+  margin: 36px 0 0 200px;
+  border-radius: 50%;
+  grid-area: picture;
+}
+
+.profile__text{
   color: #FFFFFF;
   display:block;
   margin: 105px 0 0 30px;
 }
 
 .profile__name{
-  font-family: "Inter", "Arial", sans-serif;
-  font-weight: 500;
+  font-family: "Inter-Medium", "Arial", sans-serif;
   font-size: 42px;
   line-height: 1.1;
   margin: 0;
+  grid-area: name;
 }
 .profile__title{
-  font-family: "Inter", "Arial", sans-serif;
-  font-weight: 400;
+  font-family: "Inter-Medium", "Arial", san-serif;
   font-size: 18px;
   line-height: 1.2;
   margin: 16px 0 0 0;
+  grid-area: title;
 }
 .profile__pencil{
-  width: 10px;
-  height: 10px;
-  position: relative;
-  left: 7px;
-  bottom: 7px;
-}
-
-.profile__square{
-  position: relative;
   width: 24px;
   height: 24px;
-  top:0;
-  right: 21px;
+  background-color: #000000;
+  border: 2px solid #FFFFFF;
+  background-image: url(../images/pencil.svg);
+  background-size: 10px 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+  align-self: center;
+  justify-content: center;
+  margin-left: 17px;
+  margin-bottom: 15px;
+  grid-area: pencil;
+}
+.profile__pencil:hover{
+  opacity: .6;
+}
+.profile__plus{
+  width:150px;
+  height:50px;
+  background-color: #000000;
+  border: 4px solid #FFFFFF;
+  border-radius: 2px;
+  background-image: url(../images/plus.svg);
+  background-size: 22px 22px;
+  background-repeat: no-repeat;
+  background-position: center;
+  align-self: center;
+  position: relative;
+  left: 48px;
+  top: 5px;
+  grid-area: plus;
+}
+.profile__plus:hover{
+  border: 4px solid #545454;
+  background-image: url(../images/Vector.svg);
+}
+@media screen and (max-width: 1201px){
+  .profile__picture{
+    margin: 36px 0 0 25px;
+  }
+}
+@media screen and (max-width: 908px){
+  .profile{
+    display:grid;
+  }
+
 }
 
-.profile__add-button-box{
-  position: relative;
-  padding: 11px 0 0 35px;
-}
-
-.profile__add-button-plus{
-  position: relative;
-  top:1px;
-  right:121px;
-  padding: 11px 0 0 35px;
+@media screen and (max-width: 800px){
+  .profile{
+    display: grid;
+    grid-template-rows: 127px 22px 50px;
+    grid-template-columns: 282px;
+    grid-template-areas:
+    "picture"
+    "name pencil"
+    "title"
+    "plus";
+  }
 }

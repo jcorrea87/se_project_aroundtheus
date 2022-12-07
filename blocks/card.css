@@ -4,7 +4,8 @@
 }
 
 .card-wrapper{
-  margin-bottom: 67px;
+  margin: 0 auto;
+  padding-bottom: 67px;
   background-color: #000000;
   display:grid;
   grid-template-columns: 282px 282px 282px;

@@ -79,22 +79,53 @@
     margin: 36px 0 0 25px;
   }
 }
-@media screen and (max-width: 908px){
-  .profile{
-    display:grid;
-  }
 
-}
-
-@media screen and (max-width: 800px){
+@media screen and (max-width: 906px){
   .profile{
     display: grid;
-    grid-template-rows: 127px 22px 50px;
+    grid-template-rows: 100px 100px 100px 100px;
     grid-template-columns: 282px;
     grid-template-areas:
-    "picture"
+    "picture picture"
     "name pencil"
-    "title"
-    "plus";
+    "title title"
+    "plus plus";
+  }
+}
+
+@media screen and (max-width: 906px){
+  .profile__picture{
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 906px){
+  .profile__name{
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 906px){
+  .profile__title{
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 906px){
+  .profile__pencil{
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 906px){
+  .profile__plus{
+    margin: 0 auto;
+    position: relative;
+    left: 0px;
+  }
+}
+
+@media screen and (max-width: 906px){
+  .profile__text{
   }
 }

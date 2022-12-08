@@ -107,9 +107,18 @@
   }
 }
 
-@media screen and (max-width: 906px){
+@media screen and (max-width: 905px){
   .profile__description{
-    margin:0 auto;
+    position: relative;
+    left:160px;
+
+  }
+}
+
+@media screen and (max-width: 905px){
+  .profile__pencil{
+    position:relative;
+    bottom: 16px;
   }
 }
 
@@ -156,6 +165,13 @@
   }
 }
 
+@media screen and (max-width: 320px){
+  .profile__pencil{
+    position:relative;
+    bottom: 4px;
+    right: 40px;
+  }
+}
 @media screen and (max-width: 320px){
   .profile__picture{
     margin-top: 36px;

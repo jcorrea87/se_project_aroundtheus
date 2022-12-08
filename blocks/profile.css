@@ -11,29 +11,31 @@
 }
 
 .profile__picture{
-  margin: 36px 0 0 200px;
+  width: 140px;
+  height: 128px;
   border-radius: 50%;
   grid-area: picture;
+  margin: 50px 4px 5px 190px;
 }
-
-.profile__text{
-  color: #FFFFFF;
-  display:block;
-  margin: 105px 0 0 30px;
-}
-
 .profile__name{
   font-family: "Inter-Medium", "Arial", sans-serif;
+  font-weight: 500;
+  color: #FFFFFF;
+  display:block;
   font-size: 42px;
   line-height: 1.1;
-  margin: 0;
+  margin: 77px 18px 50px 25px;
   grid-area: name;
 }
-.profile__title{
-  font-family: "Inter-Medium", "Arial", san-serif;
+.profile__description{
+  font-family: "Inter-Regular" "Arial", san-serif;
+  font-weight: 400;
+  color: #FFFFFF;
+  margin: 105px 0 0 30px;
   font-size: 18px;
   line-height: 1.2;
   margin: 16px 0 0 0;
+  align-self: center;
   grid-area: title;
 }
 .profile__pencil{
@@ -47,8 +49,8 @@
   background-position: center;
   align-self: center;
   justify-content: center;
-  margin-left: 17px;
-  margin-bottom: 15px;
+  position:relative;
+  bottom: 2px;
   grid-area: pencil;
 }
 .profile__pencil:hover{
@@ -66,8 +68,8 @@
   background-position: center;
   align-self: center;
   position: relative;
-  left: 48px;
-  top: 5px;
+  left: 150px;
+  top:10px;
   grid-area: plus;
 }
 .profile__plus:hover{
@@ -83,22 +85,15 @@
 @media screen and (max-width: 906px){
   .profile{
     display: grid;
-    grid-template-rows: 100px 100px 100px 100px;
-    grid-template-columns: 282px;
+    grid-template-columns: minmax(auto, 400px) auto;
     grid-template-areas:
     "picture picture"
     "name pencil"
     "title title"
     "plus plus";
+    justify-content: center;
   }
 }
-
-/*@media screen and (max-width: 906px){
-  .profile__text{
-    width:100%;
-    margin: 0 auto;
-  }
-}*/
 
 @media screen and (max-width: 906px){
   .profile__picture{
@@ -108,27 +103,17 @@
 
 @media screen and (max-width: 906px){
   .profile__name{
-
     margin: 0 auto;
   }
 }
 
 @media screen and (max-width: 906px){
-  .profile__title{
-    width: auto;
-    height: auto;
-    margin: 0 auto;
+  .profile__description{
+    margin:0 auto;
   }
 }
 
-@media screen and (max-width: 906px){
-  .profile__pencil{
-    margin: 150px auto 0;
-
-  }
-}
-
-@media screen and (max-width: 906px){
+@media screen and (max-width: 800px){
   .profile__plus{
     margin: 0 auto;
     position: relative;
@@ -136,29 +121,38 @@
   }
 }
 
-@media screen and (max-width: 906px){
+@media screen and (max-width: 800px){
   .profile__text{
     margin:auto;
   }
 }
 
-@media screen and (max-width: 320px){
+@media screen and (max-width: 450px){
+    .profile__name{
+      font-size: 32px;
+    }
+}
+
+@media screen and (max-width: 345px){
   .profile__plus{
     width: 282px;
-    margin-bottom: 36px
   }
 }
 
-@media screen and (max-width: 320px){
+@media screen and (max-width: 345px){
   .profile__name{
     margin-top: 26px;
+    width: 196px;
+    height: 22px;
+    font-size: 22px;
+    margin:auto;
   }
 }
 
 @media screen and (max-width: 320px){
-  .profile__title{
-    margin-top: 14px;
-    margin-bottom:36px;
+  .profile__description{
+    padding-top: 14px;
+    padding-bottom:36px;
   }
 }
 
@@ -166,4 +160,11 @@
   .profile__picture{
     margin-top: 36px;
   }
+}
+
+@media screen and (max-width: 320px){
+   .header__horizontal-row{
+    width:320px;
+    flex-shrink:0;
+   }
 }

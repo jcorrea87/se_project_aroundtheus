@@ -1,18 +1,23 @@
 .footer__copyright{
-  padding-top: 67px;
-  padding-left: 200px;
-  padding-bottom: 60px;
   color: #545454;
   background-color: #000000;
   font-family: "Inter", "Alias", sans-serif;
   font-weight: 400;
   font-size:18px;
   line-height: 1.21;
-  margin:0;
+  position:relative;
+  bottom: 35px;
+  left:4px;
 }
 
-@media screen and (max-width: 546px){
+@media screen and (max-width:800px){
   .footer__copyright{
-    padding-left: 19px;
+    left:195px;
+  }
+}
+
+@media screen and (max-width:320px){
+  .footer__copyright{
+    left:90px;
   }
 }

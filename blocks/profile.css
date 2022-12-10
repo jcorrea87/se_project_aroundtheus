@@ -1,72 +1,71 @@
-@font-face{
+@font-face {
   font-family: "Inter-Medium";
   src: url(../fonts/Inter-Medium.woff2);
 }
-@font-face{
+@font-face {
   font-family: "Inter-Regular";
   src: url(../fonts/Inter-Regular.woff2);
 }
-.profile{
+.profile {
   display: flex;
 }
 
-.profile__picture{
+.profile__picture {
   width: 140px;
   height: 128px;
   border-radius: 50%;
-  position:relative;
+  position: relative;
   top: 36px;
   grid-area: picture;
 }
-.profile__name{
+.profile__name {
   font-family: "Inter-Medium", "Arial", sans-serif;
   font-weight: 500;
-  color: #FFFFFF;
-  display:block;
+  color: #ffffff;
+  display: block;
   font-size: 42px;
   line-height: 1.1;
-  position:relative;
+  position: relative;
   top: 36px;
   left: 15px;
   grid-area: name;
 }
-.profile__description{
-  font-family: "Inter-Regular" "Arial", san-serif;
+.profile__description {
+  font-family: "Inter-Regular", "Arial", san-serif;
   font-weight: 400;
-  color: #FFFFFF;
+  color: #ffffff;
   margin: 105px 0 0 30px;
   font-size: 18px;
   line-height: 1.2;
   align-self: center;
-  position:relative;
+  position: relative;
   right: 28px;
   bottom: 95px;
   grid-area: description;
-
 }
-.profile__pencil{
+.profile__pencil {
   width: 24px;
   height: 24px;
   background-color: #000000;
-  border: 2px solid #FFFFFF;
+  border: 2px solid #ffffff;
   background-image: url(../images/pencil.svg);
   background-size: 10px 10px;
   background-repeat: no-repeat;
   background-position: center;
   align-self: center;
-  position:relative;
+  position: relative;
   left: 30px;
   bottom: 24px;
   grid-area: pencil;
 }
-.profile__pencil:hover{
-  opacity: .6;
+.profile__pencil:hover {
+  opacity: 0.6;
 }
-.profile__plus{
-  width:150px;
-  height:50px;
+.profile__plus {
+  width: 150px;
+  height: 50px;
   background-color: #000000;
-  border: 4px solid #FFFFFF;
+  border: 4px solid #ffffff;
   border-radius: 2px;
   background-image: url(../images/plus.svg);
   background-size: 22px 22px;
@@ -78,111 +77,134 @@
   bottom: 15px;
   grid-area: plus;
 }
-.profile__plus:hover{
+.profile__plus:hover {
   border: 4px solid #545454;
   background-image: url(../images/Vector.svg);
 }
 
-/*@media screen and (max-width:597px){
-  .profile{
-    display:block;
+@media screen and (min-width: 801px) {
+  .profile__name {
+    left: 0px;
   }
 }
 
-@media screen and (max-width:597px){
-  .profile__picture{
-    left:100px;
+@media screen and (min-width: 801px) {
+  .profile__plus {
+    left: 155px;
   }
-}*/
-
-@media screen and (max-width:800px){
-  .profile__picture{
-    left:35px;
-    margin-top:20px;
+}
+@media screen and (min-width: 801px) {
+  .profile__picture {
+    margin-right: 65px;
+    margin-left: -35px;
   }
 }
 
-@media screen and (max-width:800px){
-  .profile__name{
-    left: 65px;
-    top:55px;
+@media screen and (max-width: 800px) {
+  .profile__name {
+    left: 45px;
+    top: 55px;
   }
 }
-@media screen and (max-width:800px){
-  .profile__description{
+@media screen and (max-width: 800px) {
+  .profile__description {
     right: 28px;
     bottom: 95px;
   }
 }
 
-@media screen and (max-width:800px){
-  .profile__pencil{
-    left:75px;
-    bottom:7px;
+@media screen and (max-width: 800px) {
+  .profile__pencil {
+    left: 75px;
+    bottom: 7px;
   }
 }
-@media screen and (max-width: 800px){
-  .profile__plus{
-    left:215px;
-    bottom:0px;
-  }
-}
-
-@media screen and (max-width:321px){
-  .profile__pencil{
-    left: 50px;
-    bottom:50px;
-  }
-}
-@media screen and (max-width:686px){
-  .profile__pencil{
-    left:50px;
-    bottom: 50px;
+@media screen and (max-width: 800px) {
+  .profile__plus {
+    left: 215px;
+    bottom: 0px;
   }
 }
 
-@media screen and (max-width: 320px){
-  .profile{
-    display:block;
+@media screen and (max-width: 441px) {
+  .profile {
+    display: block;
   }
 }
 
-@media screen and (max-width: 320px){
-  .profile__name{
+@media screen and (max-width: 441px) {
+  .profile__pencil {
+    left: 475px;
+    bottom: 158px;
+  }
+}
+
+@media screen and (max-width: 441px) {
+  .profile__name {
+    left: 45px;
+  }
+}
+
+@media screen and (max-width: 441px) {
+  .profile__plus {
+    left: 220px;
+    bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 372px) {
+  .profile__pencil {
+    left: 275px;
+  }
+}
+
+@media screen and (min-width: 321px) {
+  .profile__picture {
+    left: 35px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .profile {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .profile__name {
     font-size: 22px;
     left: 100px;
-    top:50px;
+    top: 50px;
     display: inline-block;
   }
 }
 
-@media screen and (max-width: 320px){
-  .profile__description{
+@media screen and (max-width: 320px) {
+  .profile__description {
     font-size: 18px;
-    left:50px;
-    bottom:100px;
+    left: 50px;
+    bottom: 100px;
   }
 }
 
-@media screen and (max-width: 320px){
-  .profile__pencil{
-    left:109px;
-    bottom:80px;
+@media screen and (max-width: 320px) {
+  .profile__pencil {
+    left: 109px;
+    bottom: 80px;
   }
 }
 
-@media screen and (max-width:320px){
-  .profile__plus{
-    width:280px;
-    left:84px;
-    bottom:35px;
+@media screen and (max-width: 320px) {
+  .profile__plus {
+    width: 280px;
+    left: 84px;
+    bottom: 35px;
   }
 }
 
-@media screen and (max-width:320px){
-  .profile__picture{
+@media screen and (max-width: 320px) {
+  .profile__picture {
     left: 145px;
-    top:45px;
+    top: 45px;
   }
 }
-

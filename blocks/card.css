@@ -1,12 +1,12 @@
-@font-face{
+@font-face {
   font-family: "Inter-Black";
   src: url(../fonts/Inter-Black.woff2);
 }
 
-.card-wrapper{
+.card-wrapper {
   padding-bottom: 67px;
   background-color: #000000;
-  display:grid;
+  display: grid;
   grid-template-columns: 282px 282px 282px;
   grid-row-gap: 20px;
   grid-column-gap: 17px;
@@ -15,112 +15,112 @@
     "latemar vanoise lago";
 }
 
-.card{
-    margin-top:0px;
-    margin-left:0px;
+.card {
+  margin-top: 0px;
+  margin-left: 0px;
 }
 
-.card__picture{
-    width:282px;
-    height:282px;
-    border-radius: 10px 10px 0 0;
-    display:flex;
+.card__picture {
+  width: 282px;
+  height: 282px;
+  border-radius: 10px 10px 0 0;
+  display: flex;
 }
 
-.card__caption{
-    width:282px;
-    height:79px;
-    background-color: #FFFFFF;
-    padding: 0;
-    box-sizing: border-box;
-    border-radius: 0 0 10px 10px;
-    margin: 0;
-    display: flex;
-    justify-content: space-between;
+.card__caption {
+  width: 282px;
+  height: 79px;
+  background-color: #ffffff;
+  padding: 0;
+  box-sizing: border-box;
+  border-radius: 0 0 10px 10px;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
 }
 
-.card__heading{
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-    font-family: "Inter-Black", "Arial", sans-serif;
-    font-weight: 900;
-    font-size:24px;
-    line-height:1.2;
-    text-align: center;
-    align-items: center;
-    padding: 6px 0 0 20px;
+.card__heading {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  font-family: "Inter-Black", "Arial", sans-serif;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 1.2;
+  text-align: center;
+  align-items: center;
+  padding: 6px 0 0 20px;
 }
 
-.card__button{
-    flex-shrink: 0;
-    width:21px;
-    height:18px;
-    margin-right: 20px;
-    margin-top: 32px;
-    align-content:center;
-    background-color: #FFFFFF;
-    border: none;
-    background-image: url(../images/black-heart.svg);
+.card__button {
+  flex-shrink: 0;
+  width: 21px;
+  height: 18px;
+  margin-right: 20px;
+  margin-top: 32px;
+  align-content: center;
+  background-color: #ffffff;
+  border: none;
+  background-image: url(../images/black-heart.svg);
 }
-.card__button:hover{
+.card__button:hover {
   background-image: url(../images/grey-heart.svg);
   background-repeat: no-repeat;
 }
-.card__yosemite{
+.card__yosemite {
   grid-area: yosemite;
 }
 
-.card__lake{
+.card__lake {
   grid-area: lake;
 }
 
-.card__bald{
+.card__bald {
   grid-area: bald;
 }
 
-.card__latemar{
+.card__latemar {
   grid-area: latemar;
 }
 
-.card__vanoise{
+.card__vanoise {
   grid-area: vanoise;
 }
 
-.card__lago{
+.card__lago {
   grid-area: lago;
 }
 
-@media screen and (max-width: 1000px){
-.card-wrapper{
-  grid-template-areas:
-    "yosemite lake"
-    "bald latemar"
-    "vanoise lago";
-  position:relative;
-  left:160px;
+@media screen and (max-width: 1000px) {
+  .card-wrapper {
+    grid-template-areas:
+      "yosemite lake"
+      "bald latemar"
+      "vanoise lago";
+    position: relative;
+    left: 160px;
   }
 }
-@media screen and (max-width:800px){
-  .card-wrapper{
-    left:190px;
+@media screen and (max-width: 800px) {
+  .card-wrapper {
+    left: 190px;
   }
 }
-@media screen and (max-width: 750px){
-.card-wrapper{
-  grid-template-areas:
-    "yosemite"
-    "lake"
-    "bald"
-    "latemar"
-    "vanoise"
-    "lago";
+@media screen and (max-width: 750px) {
+  .card-wrapper {
+    grid-template-areas:
+      "yosemite"
+      "lake"
+      "bald"
+      "latemar"
+      "vanoise"
+      "lago";
   }
 }
 
-@media screen and (max-width:320px){
-  .card-wrapper{
-    position:relative;
+@media screen and (max-width: 320px) {
+  .card-wrapper {
+    position: relative;
     left: 85px;
   }
 }

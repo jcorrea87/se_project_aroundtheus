@@ -67,27 +67,27 @@
   background-image: url(../images/grey-heart.svg);
   background-repeat: no-repeat;
 }
-.card__yosemite {
+.card-yosemite {
   grid-area: yosemite;
 }
 
-.card__lake {
+.card-lake {
   grid-area: lake;
 }
 
-.card__bald {
+.card-bald {
   grid-area: bald;
 }
 
-.card__latemar {
+.card-latemar {
   grid-area: latemar;
 }
 
-.card__vanoise {
+.card-vanoise {
   grid-area: vanoise;
 }
 
-.card__lago {
+.card-lago {
   grid-area: lago;
 }
 

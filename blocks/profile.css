@@ -65,7 +65,7 @@
   width: 150px;
   height: 50px;
   background-color: #000000;
-  border: 4px solid #ffffff;
+  border: 3px solid #ffffff;
   border-radius: 2px;
   background-image: url(../images/plus.svg);
   background-size: 22px 22px;
@@ -82,129 +82,198 @@
   background-image: url(../images/Vector.svg);
 }
 
-@media screen and (min-width: 801px) {
-  .profile__name {
-    left: 0px;
+@media screen and (min-width: 1281px) {
+  .profile__picture {
+    margin-top: 12px;
+    margin-bottom: 25px;
   }
 }
 
-@media screen and (min-width: 801px) {
-  .profile__plus {
-    left: 155px;
+@media screen and (min-width: 1281px) {
+  .profile__name {
+    top: 45px;
+    left: 20px;
   }
 }
-@media screen and (min-width: 801px) {
+
+@media screen and (min-width: 1281px) {
+  .profile__description {
+    right: 10px;
+    bottom: 50px;
+  }
+}
+
+@media screen and (min-width: 1281px) {
+  .profile__pencil {
+    bottom: 1px;
+    left: 32px;
+  }
+}
+
+@media screen and (min-width: 1281px) {
+  .profile__plus {
+    bottom: -10px;
+  }
+}
+@media screen and (max-width: 1280px) {
   .profile__picture {
-    margin-right: 65px;
-    margin-left: -35px;
+    margin-top: 12px;
+    margin-bottom: 25px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .profile__name {
+    top: 45px;
+    left: 20px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .profile__description {
+    right: 10px;
+    bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .profile__pencil {
+    bottom: 1px;
+    left: 32px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .profile__plus {
+    bottom: -10px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .profile__picture {
+    left: 35px;
   }
 }
 
 @media screen and (max-width: 800px) {
   .profile__name {
-    left: 45px;
-    top: 55px;
+    left: 50px;
   }
 }
+
 @media screen and (max-width: 800px) {
   .profile__description {
-    right: 28px;
-    bottom: 95px;
+    right: -22px;
   }
 }
 
 @media screen and (max-width: 800px) {
   .profile__pencil {
-    left: 75px;
-    bottom: 7px;
-  }
-}
-@media screen and (max-width: 800px) {
-  .profile__plus {
-    left: 215px;
-    bottom: 0px;
+    left: 70px;
   }
 }
 
-@media screen and (max-width: 441px) {
+@media screen and (max-width: 800px) {
+  .profile__plus {
+    left: 248px;
+  }
+}
+
+@media screen and (max-width: 686px) {
+  .profile__name {
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 508px) {
   .profile {
     display: block;
   }
 }
 
-@media screen and (max-width: 441px) {
-  .profile__pencil {
-    left: 475px;
-    bottom: 158px;
-  }
-}
-
-@media screen and (max-width: 441px) {
-  .profile__name {
-    left: 45px;
-  }
-}
-
-@media screen and (max-width: 441px) {
-  .profile__plus {
-    left: 220px;
-    bottom: 40px;
-  }
-}
-
-@media screen and (max-width: 372px) {
-  .profile__pencil {
-    left: 275px;
-  }
-}
-
-@media screen and (min-width: 321px) {
+@media screen and (max-width: 508px) {
   .profile__picture {
-    left: 35px;
+    top: 56px;
+    left: 250px;
+  }
+}
+
+@media screen and (max-width: 508px) {
+  .profile__name {
+    font-size: 22px;
+    text-align: center;
+    left: 60px;
+  }
+}
+
+@media screen and (max-width: 508px) {
+  .profile__description {
+    font-size: 14px;
+    text-align: center;
+    right: -55px;
+    bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 508px) {
+  .profile__pencil {
+    left: 420px;
+    bottom: 130px;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media screen and (max-width: 508px) {
+  .profile__plus {
+    left: 163px;
+    bottom: 30px;
+    width: 280px;
   }
 }
 
 @media screen and (max-width: 320px) {
   .profile {
     display: block;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .profile__picture {
+    top: 56px;
+    left: 145px;
   }
 }
 
 @media screen and (max-width: 320px) {
   .profile__name {
     font-size: 22px;
-    left: 100px;
-    top: 50px;
-    display: inline-block;
+    text-align: center;
+    left: 45px;
   }
 }
 
 @media screen and (max-width: 320px) {
   .profile__description {
-    font-size: 18px;
-    left: 50px;
-    bottom: 100px;
+    font-size: 14px;
+    text-align: center;
+    right: -45px;
+    bottom: 50px;
   }
 }
 
 @media screen and (max-width: 320px) {
   .profile__pencil {
-    left: 109px;
-    bottom: 80px;
+    left: 315px;
+    bottom: 130px;
+    width: 20px;
+    height: 20px;
   }
 }
 
 @media screen and (max-width: 320px) {
   .profile__plus {
+    left: 57px;
+    bottom: 30px;
     width: 280px;
-    left: 84px;
-    bottom: 35px;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  .profile__picture {
-    left: 145px;
-    top: 45px;
   }
 }

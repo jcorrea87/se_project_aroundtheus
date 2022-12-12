@@ -1,28 +1,9 @@
 .footer__copyright {
   color: #545454;
   background-color: #000000;
-  font-family: "Inter", "Alias", sans-serif;
+  font-family: "Inter", "Arial", sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.21;
-  position: relative;
-  bottom: 35px;
-  left: 4px;
-}
-
-@media screen and (max-width: 1000px) {
-  .footer__copyright {
-    left: 160px;
-  }
-}
-@media screen and (max-width: 800px) {
-  .footer__copyright {
-    left: 195px;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  .footer__copyright {
-    left: 90px;
-  }
+  margin:0;
 }

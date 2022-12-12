@@ -1,46 +1,9 @@
 .header__logo {
   width: 171px;
   height: 33px;
-  position: relative;
-  top: 45px;
-}
-
-.header__horizontal-row {
   border-bottom: 1px solid#545454;
   opacity: 0.7;
   flex-shrink: 1;
-  flex-basis: 50%;
-  position: relative;
-  top: 41px;
-}
-
-@media screen and (min-width: 801px) {
-  .header__horizontal-row {
-    width: 870px;
-  }
-}
-@media screen and (max-width: 800px) {
-  .header__logo {
-    left: 35px;
-    padding-bottom: 20px;
-  }
-}
-
-@media screen and (max-width: 800px) {
-  .header__horizontal-row {
-    left: 35px;
-    width: 900px;
-  }
-}
-@media screen and (max-width: 320px) {
-  .header__logo {
-    left: 85px;
-  }
-}
-@media screen and (max-width: 320px) {
-  .header-horizontal-row {
-    left: 0px;
-    right: 16px;
-    width: 320px;
-  }
+  margin-top:45px;
+  padding-bottom:41px;
 }

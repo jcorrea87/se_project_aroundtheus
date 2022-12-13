@@ -51,6 +51,7 @@
   align-self: center;
   margin-left:18px;
   margin-bottom:30px;
+  flex-shrink:0;
 }
 .profile__edit-button:hover {
   opacity: 0.6;
@@ -69,6 +70,7 @@
   align-self: center;
   margin-bottom: 4px;
   margin-left:165px;
+  flex-shrink:0;
 }
 .profile__add-button:hover {
   border: 3px solid #545454;

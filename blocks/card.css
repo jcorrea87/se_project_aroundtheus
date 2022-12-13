@@ -3,6 +3,14 @@
   src: url(../fonts/Inter-Black.woff2);
 }
 
+.card{
+  display:grid;
+  grid-template-columns: repeat(auto-fill, 282px);
+  grid-template-rows: repeat(auto-fill, 361px);
+  row-gap:20px;
+  column-gap:17px;
+}
+
 .card__picture {
   width: 282px;
   height: 282px;
@@ -12,11 +20,13 @@
 
 .card__caption {
   width: 282px;
+  height:79px;
   background-color: #ffffff;
   box-sizing: border-box;
   border-radius: 0 0 10px 10px;
   margin: 0;
   display: flex;
+  align-items:center;
   justify-content: space-between;
 }
 
@@ -30,6 +40,7 @@
   line-height: 1.2;
   text-align: center;
   align-items: center;
+  padding-left:20px;
   margin:0;
 }
 
@@ -38,8 +49,8 @@
   width: 21px;
   height: 18px;
   margin-right: 20px;
-  margin-top: 32px;
   align-content: center;
+  justify-content: flex-start;
   background-color: #ffffff;
   border: none;
   background-image: url(../images/black-heart.svg);
@@ -48,4 +59,10 @@
   background-image: url(../images/grey-heart.svg);
   background-repeat: no-repeat;
   cursor:pointer;
+}
+
+@media screen and (max-width:880px){
+  .card{
+      justify-content:center;
+  }
 }

@@ -77,3 +77,41 @@
   background-image: url(../images/Vector.svg);
   cursor:pointer;
 }
+
+@media screen and (max-width:320px){
+  .profile__picture{
+    margin-top:38.25px;
+    margin-left:78.5px;
+  }
+  .profile__name{
+    margin-top: 176.25px;
+    margin-left:-200px;
+    padding-top:26.25px;
+    padding-bottom:14px;
+    padding-left:5px;
+    font-size:22px;
+  }
+
+  .profile__description{
+    margin-left: -120px;
+    margin-bottom:14px;
+    padding-bottom:72px;
+    font-size: 14px;
+  }
+
+  .profile__edit-button{
+    margin-left: 10px;
+    margin-bottom:-85px;
+    background-size: 7.5px 7.5px;
+    width:18px;
+    height:18px;
+  }
+
+  .profile__add-button{
+    margin-left:-260px;
+    margin-bottom:-275px;
+    width:282px;
+    height:50px;
+  }
+}
+

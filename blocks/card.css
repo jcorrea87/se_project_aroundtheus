@@ -63,6 +63,13 @@
 
 @media screen and (max-width:880px){
   .card{
+    justify-content:center;
+  }
+}
+
+@media screen and (max-width:320px){
+  .card{
+      padding-top:36px;
       justify-content:center;
   }
 }

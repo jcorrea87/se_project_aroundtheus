@@ -9,7 +9,7 @@
   
 **Intro**
   
-Responsive webpage created from Figma file linked from below. Uses flexbox and grid layout.
+Responsive webpage created from Figma file linked below. Uses flexbox and grid layout.
   
 **Figma**  
   

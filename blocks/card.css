@@ -1,14 +1,9 @@
-@font-face {
-  font-family: "Inter-Black";
-  src: url(../fonts/Inter-Black.woff2);
-}
-
-.card{
-  display:grid;
+.card {
+  display: grid;
   grid-template-columns: repeat(auto-fill, 282px);
   grid-template-rows: repeat(auto-fill, 361px);
-  row-gap:20px;
-  column-gap:17px;
+  row-gap: 20px;
+  column-gap: 17px;
 }
 
 .card__picture {
@@ -20,13 +15,14 @@
 
 .card__caption {
   width: 282px;
-  height:79px;
+  padding-top: 25px;
+  padding-bottom: 25px;
   background-color: #ffffff;
   box-sizing: border-box;
   border-radius: 0 0 10px 10px;
   margin: 0;
   display: flex;
-  align-items:center;
+  align-items: center;
   justify-content: space-between;
 }
 
@@ -34,14 +30,14 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  font-family: "Inter-Black", "Arial", sans-serif;
+  font-family: "Inter", "Arial", sans-serif;
   font-weight: 900;
   font-size: 24px;
   line-height: 1.2;
   text-align: center;
   align-items: center;
-  padding-left:20px;
-  margin:0;
+  padding-left: 20px;
+  margin: 0;
 }
 
 .card__button {
@@ -51,25 +47,24 @@
   margin-right: 20px;
   align-content: center;
   justify-content: flex-start;
-  background-color: #ffffff;
+  background-color: transparent;
   border: none;
   background-image: url(../images/black-heart.svg);
 }
 .card__button:hover {
-  background-image: url(../images/grey-heart.svg);
-  background-repeat: no-repeat;
-  cursor:pointer;
+  opacity: 0.6;
+  cursor: pointer;
 }
 
-@media screen and (max-width:880px){
-  .card{
-    justify-content:center;
+@media screen and (max-width: 880px) {
+  .card {
+    justify-content: center;
   }
 }
 
-@media screen and (max-width:320px){
-  .card{
-      padding-top:36px;
-      justify-content:center;
+@media screen and (max-width: 320px) {
+  .card {
+    padding-top: 36px;
+    justify-content: center;
   }
 }

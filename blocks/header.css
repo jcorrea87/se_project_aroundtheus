@@ -2,6 +2,18 @@
   padding-top: 45px;
   padding-bottom: 41px;
   margin: 0 auto;
-  border-bottom: 1px solid#545454;
-  opacity: 0.7;
+  border-bottom: 1px solid rgba(84,84,84, .7);
 }
+
+@media screen and (max-width: 320px){
+  .header__logo{
+    width: 126px;
+    height:24px;
+    padding-left:27px;
+    padding-top:28px;
+  }
+
+  .header{
+    padding-top:0px;
+    padding-bottom:32px;
+  }

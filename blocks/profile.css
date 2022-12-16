@@ -19,17 +19,18 @@
   white-space: nowrap;
   overflow: hidden;
   margin-left: 30px;
-  margin-top: 65px;
+  margin-top: 50px;
+  margin-bottom:0px;
+  padding-top:13px;
 }
 .profile__description {
-  font-family: "Inter", "Arial", san-serif;
+  font-family: "Inter", "Arial", sans-serif;
   font-weight: 400;
   color: #ffffff;
-  margin: 105px 0 0 30px;
+  margin-left: 30px;
   font-size: 18px;
   line-height: 1.2;
   align-self: center;
-  margin-top: -16px;
 }
 .profile__edit-button {
   width: 24px;
@@ -70,17 +71,13 @@
 }
 
 @media screen and (max-width: 879px) {
-  .profile__picture {
-    width: 168.75px;
-    height: 127.5px;
-  }
   .profile__name {
     font-size: 30px;
   }
 
   .profile__description {
     font-size: 16px;
-    padding-top: 10px;
+    padding-top: 0;
   }
 
   .profile__edit-button {
@@ -97,10 +94,6 @@
 }
 
 @media screen and (max-width: 675px) {
-  .profile__picture {
-    width: 168.75px;
-    height: 127.5px;
-  }
 
   .profile__name {
     font-size: 20px;
@@ -108,7 +101,7 @@
 
   .profile__description {
     font-size: 14px;
-    padding-top: 10px;
+    padding-top: 3px;
   }
 
   .profile__edit-button {
@@ -128,7 +121,7 @@
 
   .profile__description {
     font-size: 12px;
-    padding-top: 10px;
+    padding-top: 3px;
   }
 
   .profile__edit-button {
@@ -140,8 +133,6 @@
   .profile__add-button {
     width: 180px;
     height: 33px;
-    margin-left: -175px;
-    margin-bottom: -50px;
   }
 }
 
@@ -155,45 +146,45 @@
   }
 
   .profile__add-button {
-    margin-left: -175px;
+    margin-right: 175px;
   }
 }
 
 @media screen and (max-width: 320px) {
+  .profile{
+    display:block;
+  }
   .profile__picture {
-    margin-top: 38.25px;
-    margin-left: 70px;
+    margin-top:38.25px;
+    margin-left:78.5px;
+    margin-bottom:26.25px;
   }
   .profile__name {
-    margin-top: 176.25px;
-    margin-left: -195px;
-    padding-top: 26.25px;
-    padding-bottom: 14px;
-    padding-right: 5px;
     font-size: 22px;
+    padding-top:0;
+    margin-top:0;
+    margin-left:62px;
   }
 
   .profile__description {
-    margin-left: -110px;
-    margin-bottom: 14px;
-    padding-bottom: 72px;
-    position: relative;
-    bottom: 15px;
     font-size: 14px;
+    padding:0;
+    margin: 14px 0 36px 0;
+    text-align:center;
   }
 
   .profile__edit-button {
-    margin-left: 10px;
-    margin-bottom: -75px;
     background-size: 7.5px 7.5px;
     width: 18px;
     height: 18px;
+    margin-left:272.25px;
+    margin-bottom:0px;
   }
 
   .profile__add-button {
-    margin-left: -250px;
-    margin-bottom: -275px;
     width: 282px;
     height: 50px;
+    margin-left:19px;
+    margin-right:0;
   }
 }

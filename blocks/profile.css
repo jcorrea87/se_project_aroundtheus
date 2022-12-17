@@ -1,14 +1,24 @@
 .profile {
   display: flex;
+  padding-top:36.25px;
 }
 
 .profile__picture {
-  width: 168.75px;
-  height: 127.5px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
-  margin-top: 36px;
-  margin-bottom: 47.25px;
+  margin-bottom: 51px;
+  margin-right: 30px;
 }
+
+.profile__info{
+  display:grid;
+  grid-template-areas:
+    "name button"
+    "description description";
+  grid-template-columns: minmax(auto, 373px) auto;
+}
+
 .profile__name {
   font-family: "Inter", "Arial", sans-serif;
   font-weight: 500;
@@ -18,19 +28,9 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  margin-left: 30px;
-  margin-top: 50px;
-  margin-bottom:0px;
-  padding-top:13px;
-}
-.profile__description {
-  font-family: "Inter", "Arial", sans-serif;
-  font-weight: 400;
-  color: #ffffff;
-  margin-left: 30px;
-  font-size: 18px;
-  line-height: 1.2;
-  align-self: center;
+  max-width: 373px;
+  margin: 23px 0 0 0;
+  grid-area: name;
 }
 .profile__edit-button {
   width: 24px;
@@ -42,14 +42,30 @@
   background-repeat: no-repeat;
   background-position: center;
   align-self: center;
-  margin-left: 18px;
-  margin-bottom: 30px;
   flex-shrink: 0;
+  grid-area: button;
+  margin-left:18px;
+  margin-top: 28px;
 }
 .profile__edit-button:hover {
   opacity: 0.6;
   cursor: pointer;
 }
+.profile__description {
+  font-family: "Inter", "Arial", sans-serif;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 1.2;
+  align-self: center;
+  grid-area: description;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 373px;
+  margin:16px 0 72px 0;
+}
+
 .profile__add-button {
   width: 150px;
   height: 50px;
@@ -61,115 +77,37 @@
   background-repeat: no-repeat;
   background-position: center;
   align-self: center;
-  margin-bottom: 10px;
-  margin-left: 140px;
   flex-shrink: 0;
+  margin-left:auto;
+  margin-bottom:58px;
 }
 .profile__add-button:hover {
   opacity: 0.6;
   cursor: pointer;
 }
 
-@media screen and (max-width: 879px) {
-  .profile__name {
-    font-size: 30px;
-  }
-
-  .profile__description {
-    font-size: 16px;
-    padding-top: 0;
-  }
-
-  .profile__edit-button {
-    margin-bottom: 44px;
-    width: 19px;
-    height: 19px;
-  }
-  .profile__add-button {
-    margin-left: 65px;
-    margin-bottom: 24px;
-    width: 125px;
-    height: 42px;
-  }
-}
-
-@media screen and (max-width: 675px) {
-
-  .profile__name {
-    font-size: 20px;
-  }
-
-  .profile__description {
-    font-size: 14px;
-    padding-top: 3px;
-  }
-
-  .profile__edit-button {
-    margin-bottom: 51px;
-  }
-
-  .profile__add-button {
-    margin-bottom: 29px;
-    margin-left: 40px;
-  }
-}
-
-@media screen and (max-width: 536px) {
-  .profile__name {
-    font-size: 16px;
-  }
-
-  .profile__description {
-    font-size: 12px;
-    padding-top: 3px;
-  }
-
-  .profile__edit-button {
-    width: 16px;
-    height: 16px;
-    margin-bottom: 57px;
-  }
-
-  .profile__add-button {
-    width: 180px;
-    height: 33px;
-  }
-}
-
-@media screen and (max-width: 338px) {
-  .profile__name {
-    margin-left: 5px;
-  }
-
-  .profile__description {
-    margin-left: 5px;
-  }
-
-  .profile__add-button {
-    margin-right: 175px;
-  }
-}
-
 @media screen and (max-width: 320px) {
+
   .profile{
     display:block;
   }
-  .profile__picture {
-    margin-top:38.25px;
-    margin-left:78.5px;
-    margin-bottom:26.25px;
+
+  .profile__picture{
+    margin-left: 101px;
   }
+
   .profile__name {
     font-size: 22px;
-    padding-top:0;
-    margin-top:0;
-    margin-left:62px;
+    max-width:200px;
+    margin:0;
+    padding-bottom:14px;
+    padding-left:62px;
   }
 
   .profile__description {
     font-size: 14px;
-    padding:0;
-    margin: 14px 0 36px 0;
+    margin:0;
+    padding-bottom:36px;
     text-align:center;
   }
 
@@ -177,14 +115,13 @@
     background-size: 7.5px 7.5px;
     width: 18px;
     height: 18px;
-    margin-left:272.25px;
-    margin-bottom:0px;
+    margin:0 34px 16px 0;
   }
 
   .profile__add-button {
     width: 282px;
     height: 50px;
+    margin-bottom:36px;
     margin-left:19px;
-    margin-right:0;
   }
 }

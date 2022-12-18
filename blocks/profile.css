@@ -1,6 +1,6 @@
 .profile {
   display: flex;
-  padding-top:36.25px;
+  padding-top:40px;
 }
 
 .profile__picture {
@@ -89,11 +89,12 @@
 @media screen and (max-width: 320px) {
 
   .profile{
-    display:block;
+    flex-direction:column;
+    padding-top:0px;
   }
 
   .profile__picture{
-    margin-left: 101px;
+    margin: 42px 99px 30px 101px;
   }
 
   .profile__name {
@@ -122,6 +123,6 @@
     width: 282px;
     height: 50px;
     margin-bottom:36px;
-    margin-left:19px;
+    margin-left:0px;
   }
 }

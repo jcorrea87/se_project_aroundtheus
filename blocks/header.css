@@ -5,13 +5,13 @@
   border-bottom: 1px solid rgba(84, 84, 84, 0.7);
 }
 
-@media screen and (max-width: 876px) {
+@media screen and (max-width: 880px) {
   .header__logo {
     margin-left: 25px;
   }
 }
 
-@media screen and (max-width: 568px) and (min-width: 321px) {
+@media screen and (max-width: 580px) and (min-width: 321px) {
   .header {
     padding-top: 0;
     padding-bottom: 0;
@@ -29,13 +29,14 @@
 @media screen and (max-width: 320px) {
   .header {
     padding-top: 0px;
-    padding-bottom: 32px;
+    padding-bottom: 0px;
   }
   .header__logo {
     width: 126px;
     height: 24px;
     padding-left: 27px;
     padding-top: 28px;
+    margin-bottom: 32px;
     margin-left: 0px;
   }
 }

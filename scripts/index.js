@@ -6,8 +6,3 @@ let initialCards = [
   { name: "Vanoise National Park", link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/vanoise.jpg" },
   { name: "Lago di Braies", link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/lago.jpg" },
 ];
-
-var btn = document.getElementsByClassName("profile__edit-button");
-btn.onclick = function() {
-  modal.style.display="block";
-}

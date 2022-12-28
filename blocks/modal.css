@@ -8,8 +8,12 @@
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.modal_opened {
+.modal__opened {
   display: block;
+}
+
+.modal__closed{
+  display: none;
 }
 
 .modal__container {

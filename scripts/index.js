@@ -11,15 +11,15 @@ let initialCards = [
 const btnEdit = document.querySelector("#btn-edit");
 const modalOpen = document.querySelector(".modal");
 
-function myFunction () {
+function openModal () {
   modalOpen.classList.remove("modal_closed");
 }
-btnEdit.addEventListener("click", myFunction);
+btnEdit.addEventListener("click", openModal);
 
 const button = document.querySelector("#btn-close");
 const modal = document.querySelector(".modal");
 
-function myFunction () {
+function closeModal () {
   modal.classList.add("modal_closed");
 }
-button.addEventListener("click", myFunction);
+button.addEventListener("click", closeModal);

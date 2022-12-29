@@ -1,0 +1,41 @@
+.form__fieldset {
+  border: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.form__input-name {
+  padding-bottom: 13.26px;
+  margin: 0 36px 29.74px 36px;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  font-family: "Inter", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.21;
+}
+
+.form__input-description {
+  padding-bottom: 13.26px;
+  margin: 0 36px 0 36px;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  font-family: "Inter", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.21;
+}
+
+@media screen and (max-width: 580px) {
+  .form__input-name {
+    margin: 0 22px 30px 22px;
+  }
+  .form__input-description {
+    margin: 0 22px 0 22px;
+  }
+}

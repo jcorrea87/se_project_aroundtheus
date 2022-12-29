@@ -23,8 +23,8 @@
           <img class="profile__picture" src="./images/jacques-cousteau-min.jpg" alt="Picture of Jacques Cousteau" />
           <div class="profile__info">
             <h1 class="profile__name">Jacques Cousteau</h1>
-            <button id="btn" class="profile__edit-button" type="button"></button>
-            <div class="modal">
+            <button id="btn-edit" class="profile__edit-button" type="button"></button>
+            <div class="modal modal_closed">
               <div class="modal__container">
                 <h1 class="modal__heading">Edit profile</h1>
                 <form class="form">
@@ -34,7 +34,7 @@
                   </fieldset>
                 </form>
                 <button class="modal__save-button" type="button"></button>
-                <button class="modal__close-button" type="button"></button>
+                <button id="btn-close" class="modal__close-button" type="button"></button>
               </div>
             </div>
             <p class="profile__description">Explorer</p>

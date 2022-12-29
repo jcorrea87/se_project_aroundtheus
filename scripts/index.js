@@ -8,9 +8,18 @@ let initialCards = [
 ];
 
 
+const btnEdit = document.querySelector("#btn-edit");
+const modalOpen = document.querySelector(".modal");
 
-let button = document.getElementsByClassName("modal");
 function myFunction () {
-  button.setAttribute("display", "block");
+  modalOpen.classList.remove("modal_closed");
 }
-document.getElementsByClassName("modal").addEventListener("click", myFunction);
+btnEdit.addEventListener("click", myFunction);
+
+const button = document.querySelector("#btn-close");
+const modal = document.querySelector(".modal");
+
+function myFunction () {
+  modal.classList.add("modal_closed");
+}
+button.addEventListener("click", myFunction);

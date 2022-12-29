@@ -11,6 +11,6 @@ let initialCards = [
 
 let button = document.getElementsByClassName("modal");
 function myFunction () {
-  button.classList.remove("modal__closed");
+  button.setAttribute("display", "block");
 }
 document.getElementsByClassName("modal").addEventListener("click", myFunction);

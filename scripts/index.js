@@ -23,3 +23,22 @@ function closeModal () {
   modal.classList.add("modal_closed");
 }
 button.addEventListener("click", closeModal);
+
+const profileFormElement = document.querySelector(".form");
+
+const nameInput = document.querySelector(".form__input-name");
+const jobInput = document.querySelector(".form__input-description");
+
+const profileName = document.querySelector(".profile__name");
+const profileJob = document.querySelector(".profile__description");
+
+function handleProfileFormSubmit(evt) {
+  evt.preventDefault();
+}
+ const nameEntry= nameInput.value;
+ const jobEntry= jobInput.value;
+
+ profileName.textContent=nameEntry;
+ profileJob.textContent=jobEntry;
+
+formElement.addEventListener('submit', handleProfileFormSubmit);

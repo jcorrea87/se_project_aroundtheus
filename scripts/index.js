@@ -50,12 +50,15 @@ profileFormElement.addEventListener('submit', handleProfileFormSubmit);
 
 function getCardElement(data){
 
-  let userTemplate = ("#card__template").content;
+
+  let userTemplate = document.querySelector("#card__template").content;
+  let cardDivider = document.querySelector(".card__divider");
+
   let userElement = userTemplate.querySelector(".card__divider").cloneNode(true);
 
   userElement.querySelector(".card__picture").src = initialCards.link[0];
   userElement.querySelector(".card__heading").textContent = initialCards.name[0];
 
-
+  cardDivider.append(userElement);
 }
 

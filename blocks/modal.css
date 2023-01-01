@@ -32,24 +32,6 @@
   margin: 34px 64px 54px 36px;
 }
 
-.modal__save-button {
-  width: 358px;
-  height: 50.15px;
-  background-color: #000000;
-  border: none;
-  background-image: url(../images/save-icon.svg);
-  background-size: 109px 18px;
-  background-repeat: no-repeat;
-  background-position: center;
-  margin: 48px 36px 36.51px 36px;
-  padding: 0;
-}
-
-.modal__save-button:hover {
-  opacity: 0.8;
-  cursor: pointer;
-}
-
 .modal__close-button {
   width: 40px;
   height: 40px;
@@ -77,12 +59,6 @@
 
   .modal__heading {
     margin: 25px 22px 75px 22px;
-  }
-
-  .modal__save-button {
-    width: 238px;
-    height: 45px;
-    margin: 45px 22px 25px 22px;
   }
 
   .modal__close-button {

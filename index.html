@@ -32,8 +32,8 @@
                     <input class="form__input-name" type="text" placeholder="Name" />
                     <input class="form__input-description" type="text" placeholder="Description" />
                   </fieldset>
+                  <button class="form__save-button" type="submit"></button>
                 </form>
-                <button class="modal__save-button" type="button"></button>
                 <button id="btn-close" class="modal__close-button" type="button"></button>
               </div>
             </div>
@@ -42,6 +42,7 @@
           <button class="profile__add-button" type="button"></button>
         </section>
         <section class="card">
+        <template id="card__template">
           <div class="card__divider">
             <img class="card__picture" src="./images/yosemite-valley-min.jpg" alt="river running through a forest with a mountain in the background" />
             <div class="card__caption">
@@ -49,6 +50,8 @@
               <button class="card__button" type="button"></button>
             </div>
           </div>
+        </template>
+          <!--
           <div class="card__divider">
             <img class="card__picture" src="./images/lake-louise-min.jpg" alt="lake with mountains in the background" />
             <div class="card__caption">
@@ -84,6 +87,7 @@
               <button class="card__button" type="button"></button>
             </div>
           </div>
+        -->
         </section>
       </main>
       <footer class="footer">

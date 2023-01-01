@@ -13,6 +13,8 @@ const modalOpen = document.querySelector(".modal");
 
 function openModal () {
   modalOpen.classList.remove("modal_closed");
+  nameInput.placeholder=profileName.textContent;
+  jobInput.placeholder=profileJob.textContent;
 }
 btnEdit.addEventListener("click", openModal);
 
@@ -34,11 +36,26 @@ const profileJob = document.querySelector(".profile__description");
 
 function handleProfileFormSubmit(evt) {
   evt.preventDefault();
-}
+
  const nameEntry= nameInput.value;
  const jobEntry= jobInput.value;
 
  profileName.textContent=nameEntry;
  profileJob.textContent=jobEntry;
 
-formElement.addEventListener('submit', handleProfileFormSubmit);
+ closeModal();
+}
+
+profileFormElement.addEventListener('submit', handleProfileFormSubmit);
+
+function getCardElement(data){
+
+  let userTemplate = ("#card__template").content;
+  let userElement = userTemplate.querySelector(".card__divider").cloneNode(true);
+
+  userElement.querySelector(".card__picture").src = initialCards.link[0];
+  userElement.querySelector(".card__heading").textContent = initialCards.name[0];
+
+
+}
+

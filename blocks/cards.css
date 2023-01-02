@@ -4,4 +4,19 @@
   grid-template-rows: repeat(auto-fill, 361px);
   row-gap: 20px;
   column-gap: 17px;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 880px) {
+  .cards {
+    width: 582px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .cards {
+    width: 282px;
+  }
 }

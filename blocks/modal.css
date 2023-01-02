@@ -27,7 +27,7 @@
   font-style: normal;
   font-weight: 900;
   font-size: 24px;
-  line-height: 29px;
+  line-height: 1.21;
   color: #000000;
   margin: 34px 64px 54px 36px;
 }
@@ -54,17 +54,18 @@
   .modal__container {
     width: 282px;
     height: 340px;
-    top: 30%;
+    top: 45%;
   }
 
   .modal__heading {
     margin: 25px 22px 75px 22px;
+    font-size: 18px;
   }
 
   .modal__close-button {
     width: 26px;
     height: 26px;
-    top: -50px;
+    top: -40px;
     left: 253px;
   }
 }

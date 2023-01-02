@@ -13,6 +13,7 @@
   border-left: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   font-family: "Inter", "Arial", sans-serif;
+  font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.21;
@@ -26,6 +27,7 @@
   border-left: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   font-family: "Inter", "Arial", sans-serif;
+  font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.21;
@@ -49,17 +51,24 @@
   cursor: pointer;
 }
 
+::placeholder {
+  color: black;
+}
+
 @media screen and (max-width: 580px) {
   .form__input-name {
     margin: 0 22px 30px 22px;
+    font-size: 14px;
   }
   .form__input-description {
     margin: 0 22px 0 22px;
+    font-size: 14px;
   }
 
   .form__save-button {
     width: 238px;
     height: 45px;
     margin: 45px 22px 25px 22px;
+    background-size: 38px 18px;
   }
 }

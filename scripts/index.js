@@ -50,15 +50,19 @@ profileFormElement.addEventListener('submit', handleProfileFormSubmit);
 
 function getCardElement(data){
 
+  let cardTemplate = document.querySelector("#card__template").content;
+  let cardDivider = document.querySelector(".cards");
 
-  let userTemplate = document.querySelector("#card__template").content;
-  let cardDivider = document.querySelector(".card__divider");
+  let cardElement = cardTemplate.querySelector(".card").cloneNode(true);
 
-  let userElement = userTemplate.querySelector(".card__divider").cloneNode(true);
+  cardElement.querySelector(".card__picture").src = data.link;
+  cardElement.querySelector(".card__heading").textContent = data.name;
 
-  userElement.querySelector(".card__picture").src = initialCards.link[0];
-  userElement.querySelector(".card__heading").textContent = initialCards.name[0];
+  return cardElement;
+}
 
-  cardDivider.append(userElement);
+for (let i = 0; i < initialCards.length; i++){
+  const card = getCardElement(initialCards[i]);
+  document.body.append(card);
 }
 

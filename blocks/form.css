@@ -51,10 +51,6 @@
   cursor: pointer;
 }
 
-::placeholder {
-  color: black;
-}
-
 @media screen and (max-width: 580px) {
   .form__input-name {
     margin: 0 22px 30px 22px;

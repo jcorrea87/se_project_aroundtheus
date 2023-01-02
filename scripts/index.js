@@ -1,4 +1,4 @@
-let initialCards = [
+const initialCards = [
   { name: "Yosemite Valley", link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/yosemite.jpg" },
   { name: "Lake Louise", link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/lake-louise.jpg" },
   { name: "Bald Mountains", link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/bald-mountains.jpg" },
@@ -8,22 +8,21 @@ let initialCards = [
 ];
 
 const btnEdit = document.querySelector("#btn-edit");
-const modalOpen = document.querySelector(".modal");
+const profileModal = document.querySelector(".modal");
 
 function openModal() {
-  modalOpen.classList.remove("modal_closed");
-  nameInput.placeholder = profileName.textContent;
-  jobInput.placeholder = profileJob.textContent;
+  profileModal.classList.remove("modal_closed");
+  nameInput.value = profileName.textContent;
+  jobInput.value = profileJob.textContent;
 }
 btnEdit.addEventListener("click", openModal);
 
-const button = document.querySelector("#btn-close");
-const modal = document.querySelector(".modal");
+const profileModalCloseButton = profileModal.querySelector("#btn-close");
 
 function closeModal() {
-  modal.classList.add("modal_closed");
+  profileModal.classList.add("modal_closed");
 }
-button.addEventListener("click", closeModal);
+profileModalCloseButton.addEventListener("click", closeModal);
 
 const profileFormElement = document.querySelector(".form");
 
@@ -48,21 +47,23 @@ function handleProfileFormSubmit(evt) {
 profileFormElement.addEventListener("submit", handleProfileFormSubmit);
 
 function getCardElement(data) {
-  let cardTemplate = document.querySelector("#card__template").content;
-  let cardDivider = document.querySelector(".cards");
+  const cardTemplate = document.querySelector("#card__template").content;
+  const cardsContainer = document.querySelector(".cards");
 
-  let cardElement = cardTemplate.querySelector(".card").cloneNode(true);
+  const cardElement = cardTemplate.querySelector(".card").cloneNode(true);
 
-  let cardImage = (cardElement.querySelector(".card__picture").src = data.link);
-  let cardAlt = (cardElement.querySelector(".card__picture").alt = data.name);
-  let cardTitle = (cardElement.querySelector(".card__heading").textContent = data.name);
+  const cardImage = cardElement.querySelector(".card__picture");
+  cardImage.src = data.link;
+  cardImage.alt = data.name;
+  const cardTitle = cardElement.querySelector(".card__heading");
+  cardTitle.textContent = data.name;
 
   return cardElement;
 }
 
 for (let i = 0; i < initialCards.length; i++) {
-  let card = getCardElement(initialCards[i]);
+  const card = getCardElement(initialCards[i]);
 
-  let cardDivider = document.querySelector(".cards");
-  cardDivider.append(card);
+  const cardsContainer = document.querySelector(".cards");
+  cardsContainer.append(card);
 }

@@ -1,8 +1,50 @@
+.card{
+  position:relative;
+}
+
 .card__picture {
   width: 282px;
   height: 282px;
   border-radius: 10px 10px 0 0;
   display: flex;
+}
+
+.card__delete-button-top{
+  background-image: url(../images/delete-top.svg);
+  border:none;
+  width:18px;
+  height:4.49px;
+  padding:0;
+  position:absolute;
+  top:18px;
+  right:15px;
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-color: transparent;
+}
+
+.card__delete-button-top:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.card__delete-button-bottom{
+  background-image: url(../images/delete-bottom.svg);
+  border:none;
+  width: 15.44px;
+  height:13.51px;
+  padding:0;
+  position:absolute;
+  top:23.79px;
+  right:16.28px;
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-color: transparent;
+}
+
+.card__delete-button-bottom:hover {
+  opacity: 0.6;
+  cursor: pointer;
 }
 
 .card__caption {
@@ -32,7 +74,7 @@
   margin: 0;
 }
 
-.card__button {
+.card__like-button {
   flex-shrink: 0;
   width: 21px;
   height: 18px;
@@ -43,7 +85,7 @@
   border: none;
   background-image: url(../images/black-heart.svg);
 }
-.card__button:hover {
+.card__like-button:hover {
   opacity: 0.5;
   cursor: pointer;
 }

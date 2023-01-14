@@ -62,6 +62,8 @@ function handleProfileFormSubmit(evt) {
 profileFormElement.addEventListener("submit", handleProfileFormSubmit);
 
 /**/
+
+/*
 const cardsFormElement = document.querySelector(".cards-form");
 
 const cardsTitleInput = document.querySelector(".cards-form__input-title");
@@ -73,14 +75,15 @@ function handleCardsFormSubmit(evt) {
   const titleEntry = cardsTitleInput.value;
   const linkEntry = cardsLinkInput.value;
 
-  initialCards.name.unshift(titleEntry);
-  initialCards.link.unshift(linkEntry);
+
 
 
   closeCardsModal();
 }
 
 cardsFormElement.addEventListener("submit", handleCardsFormSubmit);
+
+*/
 
 /* */
 function getCardElement(data) {

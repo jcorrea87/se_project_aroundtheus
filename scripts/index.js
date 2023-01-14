@@ -75,7 +75,12 @@ function handleCardsFormSubmit(evt) {
   const titleEntry = cardsTitleInput.value;
   const linkEntry = cardsLinkInput.value;
 
+  initialCards.forEach(function(item) {
+  const card = getCardElement(item);
 
+  const cardsContainer = document.querySelector(".cards");
+  cardsContainer.append(card);
+})
 
 
   closeCardsModal();
@@ -107,3 +112,13 @@ initialCards.forEach(function(item) {
   const cardsContainer = document.querySelector(".cards");
   cardsContainer.append(card);
 })
+
+/* */
+
+const likeButton = document.querySelector(".card__like-button");
+
+function startTransition() {
+  likeButton.classList.add("card__like-button_active");
+}
+
+likeButton.addEventListener("click", startTransition);

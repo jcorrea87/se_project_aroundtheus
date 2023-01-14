@@ -34,13 +34,12 @@
             </div>
             <p class="profile__description">Explorer</p>
           </div>
-          <button class="profile__add-button" type="button"></button>
+          <button id="add-button" class="profile__add-button" type="button"></button>
         </section>
         <ul class="cards">
           <template id="card__template">
             <div class="card">
-              <button class="card__delete-button-top" type="button"></button>
-              <button class="card__delete-button-bottom" type="button"></button>
+              <button class="card__delete-button" type="button"></button>
               <img class="card__picture" src="#" alt="" />
               <div class="card__caption">
                 <h2 class="card__heading"></h2>
@@ -49,6 +48,20 @@
             </div>
           </template>
         </ul>
+        <div class="cards-modal cards-modal_closed">
+          <div class="cards-modal__container">
+            <h1 class="cards-modal__heading">New Place</h1>
+            <form class="cards-form">
+              <fieldset class="cards-form__fieldset">
+                <input class="cards-form__input-title" type="text" placeholder="Title" />
+                <input class="cards-form__input-link" type="text" placeholder="Image link" />
+              </fieldset>
+              <button class="cards-form__save-button" type="submit"></button>
+            </form>
+            <button id="cards-btn-close" class="cards-modal__close-button" type="button"></button>
+          </div>
+        </div>
+      </div>
         <!--
           <div class="card__divider">
             <img class="card__picture" src="./images/lake-louise-min.jpg" alt="lake with mountains in the background" />

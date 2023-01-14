@@ -8,7 +8,14 @@ const initialCards = [
 ];
 
 const btnEdit = document.querySelector("#btn-edit");
+const btnAdd = document.querySelector("#add-button");
 const profileModal = document.querySelector(".modal");
+const profileCardsModal = document.querySelector(".cards-modal");
+
+function openCardsModal() {
+  profileCardsModal.classList.remove("cards-modal_closed");
+}
+btnAdd.addEventListener("click", openCardsModal);
 
 function openModal() {
   profileModal.classList.remove("modal_closed");
@@ -18,11 +25,19 @@ function openModal() {
 btnEdit.addEventListener("click", openModal);
 
 const profileModalCloseButton = profileModal.querySelector("#btn-close");
+const profileCardsModalCloseButton = profileCardsModal.querySelector("#cards-btn-close");
 
 function closeModal() {
   profileModal.classList.add("modal_closed");
 }
 profileModalCloseButton.addEventListener("click", closeModal);
+
+function closeCardsModal() {
+  profileCardsModal.classList.add("cards-modal_closed");
+}
+profileCardsModalCloseButton.addEventListener("click", closeCardsModal);
+
+/* */
 
 const profileFormElement = document.querySelector(".form");
 
@@ -46,6 +61,28 @@ function handleProfileFormSubmit(evt) {
 
 profileFormElement.addEventListener("submit", handleProfileFormSubmit);
 
+/**/
+const cardsFormElement = document.querySelector(".cards-form");
+
+const cardsTitleInput = document.querySelector(".cards-form__input-title");
+const cardsLinkInput = document.querySelector(".cards-form__input-link");
+
+function handleCardsFormSubmit(evt) {
+  evt.preventDefault();
+
+  const titleEntry = cardsTitleInput.value;
+  const linkEntry = cardsLinkInput.value;
+
+  initialCards.name.unshift(titleEntry);
+  initialCards.link.unshift(linkEntry);
+
+
+  closeCardsModal();
+}
+
+cardsFormElement.addEventListener("submit", handleCardsFormSubmit);
+
+/* */
 function getCardElement(data) {
   const cardTemplate = document.querySelector("#card__template").content;
   const cardsContainer = document.querySelector(".cards");
@@ -61,9 +98,9 @@ function getCardElement(data) {
   return cardElement;
 }
 
-for (let i = 0; i < initialCards.length; i++) {
-  const card = getCardElement(initialCards[i]);
+initialCards.forEach(function(item) {
+  const card = getCardElement(item);
 
   const cardsContainer = document.querySelector(".cards");
   cardsContainer.append(card);
-}
+})

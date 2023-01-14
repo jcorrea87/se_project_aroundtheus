@@ -9,11 +9,11 @@
   display: flex;
 }
 
-.card__delete-button-top{
-  background-image: url(../images/delete-top.svg);
+.card__delete-button{
+  background-image: url(../images/trash.svg);
   border:none;
   width:18px;
-  height:4.49px;
+  height:19.3px;
   padding:0;
   position:absolute;
   top:18px;
@@ -23,26 +23,7 @@
   background-color: transparent;
 }
 
-.card__delete-button-top:hover {
-  opacity: 0.6;
-  cursor: pointer;
-}
-
-.card__delete-button-bottom{
-  background-image: url(../images/delete-bottom.svg);
-  border:none;
-  width: 15.44px;
-  height:13.51px;
-  padding:0;
-  position:absolute;
-  top:23.79px;
-  right:16.28px;
-  background-size:cover;
-  background-repeat:no-repeat;
-  background-color: transparent;
-}
-
-.card__delete-button-bottom:hover {
+.card__delete-button:hover {
   opacity: 0.6;
   cursor: pointer;
 }

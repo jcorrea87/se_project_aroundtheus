@@ -118,7 +118,7 @@ initialCards.forEach(function(item) {
 const likeButton = document.querySelector(".card__like-button");
 
 function startTransition() {
-  likeButton.classList.add("card__like-button_active");
+  likeButton.classList.toggle("card__like-button_active");
 }
 
 likeButton.addEventListener("click", startTransition);

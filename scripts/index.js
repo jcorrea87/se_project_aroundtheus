@@ -82,9 +82,11 @@ function handleCardsFormSubmit(evt) {
   const cardTitle = cardElement.querySelector(".card__heading");
   cardTitle.textContent = titleEntry;
 
+  const cardsContainer = document.querySelector(".cards");
+  cardsContainer.prepend(cardElement);
+
   closeCardsModal();
 
-  return cardElement;
 }
 
 cardsFormElement.addEventListener("submit", handleCardsFormSubmit);
@@ -123,7 +125,21 @@ initialCards.forEach(function(item) {
   const cardsContainer = document.querySelector(".cards");
   cardsContainer.append(card);
 });
+/* */
+const imageButton = document.querySelector("#image-button");
+const modalClass = document.querySelector(".image-modal");
 
+function openImageModal() {
+  modalClass.classList.remove("image-modal_closed");
+}
+imageButton.addEventListener("click", openImageModal);
+
+const imageCloseButton = document.querySelector("#image-btn-close");
+
+function closeImageModal() {
+  modalClass.classList.add("image-modal_closed");
+}
+imageCloseButton.addEventListener("click", closeImageModal);
 /* */
 
 /*const likeButton = document.querySelector(".card__like-button");

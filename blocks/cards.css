@@ -1,3 +1,21 @@
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fill, 282px);
@@ -16,10 +34,12 @@
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
+  animation: fade-in 1s;
 }
 
 .cards-modal_closed {
   display: none;
+  animation: fade-out 1s;
 }
 
 .cards-modal__container {

@@ -63,7 +63,6 @@ profileFormElement.addEventListener("submit", handleProfileFormSubmit);
 
 /**/
 
-/*
 const cardsFormElement = document.querySelector(".cards-form");
 
 const cardsTitleInput = document.querySelector(".cards-form__input-title");
@@ -71,24 +70,24 @@ const cardsLinkInput = document.querySelector(".cards-form__input-link");
 
 function handleCardsFormSubmit(evt) {
   evt.preventDefault();
+  const cardTemplate = document.querySelector("#card__template").content;
+  const cardElement = cardTemplate.querySelector(".card").cloneNode(true);
 
   const titleEntry = cardsTitleInput.value;
   const linkEntry = cardsLinkInput.value;
 
-  initialCards.forEach(function(item) {
-  const card = getCardElement(item);
-
-  const cardsContainer = document.querySelector(".cards");
-  cardsContainer.append(card);
-})
-
+  const cardImage = cardElement.querySelector(".card__picture");
+  cardImage.src = linkEntry;
+  cardImage.alt = titleEntry;
+  const cardTitle = cardElement.querySelector(".card__heading");
+  cardTitle.textContent = titleEntry;
 
   closeCardsModal();
+
+  return cardElement;
 }
 
 cardsFormElement.addEventListener("submit", handleCardsFormSubmit);
-
-*/
 
 /* */
 function getCardElement(data) {
@@ -103,6 +102,18 @@ function getCardElement(data) {
   const cardTitle = cardElement.querySelector(".card__heading");
   cardTitle.textContent = data.name;
 
+  const likeButton = cardElement.querySelector(".card__like-button");
+
+  likeButton.addEventListener("click", () => {
+    likeButton.classList.toggle("card__like-button_active");
+  });
+
+  const trashButton = cardElement.querySelector(".card__delete-button");
+  function deleteCard(){
+    cardElement.remove();
+  }
+  trashButton.addEventListener("click", deleteCard);
+
   return cardElement;
 }
 
@@ -111,14 +122,14 @@ initialCards.forEach(function(item) {
 
   const cardsContainer = document.querySelector(".cards");
   cardsContainer.append(card);
-})
+});
 
 /* */
 
-const likeButton = document.querySelector(".card__like-button");
+/*const likeButton = document.querySelector(".card__like-button");
 
 function startTransition() {
   likeButton.classList.toggle("card__like-button_active");
 }
 
-likeButton.addEventListener("click", startTransition);
+likeButton.addEventListener("click", startTransition);*/

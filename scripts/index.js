@@ -116,6 +116,21 @@ function getCardElement(data) {
   }
   trashButton.addEventListener("click", deleteCard);
 
+  const imageButton = document.querySelector("#image-button");
+  const modalClass = document.querySelector(".image-modal");
+
+  function openImageModal() {
+    modalClass.classList.remove("image-modal_closed");
+  }
+  imageButton.addEventListener("click", openImageModal);
+
+  const imageCloseButton = document.querySelector("#image-btn-close");
+
+  function closeImageModal() {
+    modalClass.classList.add("image-modal_closed");
+  }
+  imageCloseButton.addEventListener("click", closeImageModal);
+
   return cardElement;
 }
 
@@ -125,7 +140,7 @@ initialCards.forEach(function(item) {
   const cardsContainer = document.querySelector(".cards");
   cardsContainer.append(card);
 });
-/* */
+/*
 const imageButton = document.querySelector("#image-button");
 const modalClass = document.querySelector(".image-modal");
 
@@ -140,12 +155,4 @@ function closeImageModal() {
   modalClass.classList.add("image-modal_closed");
 }
 imageCloseButton.addEventListener("click", closeImageModal);
-/* */
-
-/*const likeButton = document.querySelector(".card__like-button");
-
-function startTransition() {
-  likeButton.classList.toggle("card__like-button_active");
-}
-
-likeButton.addEventListener("click", startTransition);*/
+*/

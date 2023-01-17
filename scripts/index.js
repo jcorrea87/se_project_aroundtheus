@@ -13,7 +13,7 @@ const profileModal = document.querySelector(".modal");
 const profileCardsModal = document.querySelector(".cards-modal");
 
 function openCardsModal() {
-  profileCardsModal.classList.remove("cards-modal_closed");
+  profileCardsModal.classList.add("cards-modal_opened");
 }
 btnAdd.addEventListener("click", openCardsModal);
 
@@ -33,7 +33,7 @@ function closeModal() {
 profileModalCloseButton.addEventListener("click", closeModal);
 
 function closeCardsModal() {
-  profileCardsModal.classList.add("cards-modal_closed");
+  profileCardsModal.classList.remove("cards-modal_opened");
 }
 profileCardsModalCloseButton.addEventListener("click", closeCardsModal);
 
@@ -67,11 +67,12 @@ const cardsFormElement = document.querySelector(".cards-form");
 
 const cardsTitleInput = document.querySelector(".cards-form__input-title");
 const cardsLinkInput = document.querySelector(".cards-form__input-link");
-const titleEntry = cardsTitleInput.value;
-const linkEntry = cardsLinkInput.value;
 
 function handleCardsFormSubmit(evt) {
   evt.preventDefault();
+  const titleEntry = cardsTitleInput.value;
+  const linkEntry = cardsLinkInput.value;
+  const newCard = getCardElement({name: titleEntry, link: linkEntry});
   const cardTemplate = document.querySelector("#card__template").content;
   const cardElement = cardTemplate.querySelector(".card").cloneNode(true);
 
@@ -82,7 +83,7 @@ function handleCardsFormSubmit(evt) {
   cardTitle.textContent = titleEntry;
 
   const cardsContainer = document.querySelector(".cards");
-  cardsContainer.prepend(cardElement);
+  cardsContainer.prepend(newCard);
 
   closeCardsModal();
 
@@ -119,16 +120,22 @@ function getCardElement(data) {
   const modalClass = document.querySelector(".image-modal");
 
   function openImageModal() {
-    modalClass.classList.remove("image-modal_closed");
+    modalClass.classList.add("image-modal_opened");
   }
   imageButton.addEventListener("click", openImageModal);
 
   const imageCloseButton = document.querySelector("#image-btn-close");
 
   function closeImageModal() {
-    modalClass.classList.add("image-modal_closed");
+    modalClass.classList.remove("image-modal_opened");
   }
   imageCloseButton.addEventListener("click", closeImageModal);
+
+  const modalImage = document.querySelector(".image-modal__image");
+  modalImage.src = data.link;
+  modalImage.alt = data.name;
+  const modalTitle = document.querySelector(".image-modal__caption");
+  modalTitle.textContent = data.name;
 
   return cardElement;
 }

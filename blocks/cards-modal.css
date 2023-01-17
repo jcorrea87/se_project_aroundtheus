@@ -1,5 +1,4 @@
-.modal {
-  display:block;
+.cards-modal {
   position: fixed;
   z-index: 50;
   left: 0;
@@ -12,13 +11,13 @@
   transition:visibility 0s linear 0.5s,opacity 0.5s linear;
 }
 
-.modal_opened {
+.cards-modal_opened {
   visibility:visible;
   opacity:1;
   transition-delay:0s;
 }
 
-.modal__container {
+.cards-modal__container {
   width: 430px;
   height: 350px;
   background-color: #ffffff;
@@ -28,7 +27,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.modal__heading {
+.cards-modal__heading {
   font-family: "Inter", "Arial", sans-serif;
   font-style: normal;
   font-weight: 900;
@@ -38,7 +37,7 @@
   margin: 34px 64px 54px 36px;
 }
 
-.modal__close-button {
+.cards-modal__close-button {
   width: 40px;
   height: 40px;
   border: none;
@@ -51,24 +50,24 @@
   left: 430px;
 }
 
-.modal__close-button:hover {
+.cards-modal__close-button:hover {
   opacity: 0.6;
   cursor: pointer;
 }
 
 @media screen and (max-width: 580px) {
-  .modal__container {
+  .cards-modal__container {
     width: 282px;
     height: 340px;
     top: 45%;
   }
 
-  .modal__heading {
+  .cards-modal__heading {
     margin: 25px 22px 75px 22px;
     font-size: 18px;
   }
 
-  .modal__close-button {
+  .cards-modal__close-button {
     width: 26px;
     height: 26px;
     top: -40px;

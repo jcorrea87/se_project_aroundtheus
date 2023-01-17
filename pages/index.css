@@ -4,6 +4,10 @@
 
 @import url("../blocks/card.css");
 
+@import url("../blocks/cards-form.css");
+
+@import url("../blocks/cards-modal.css");
+
 @import url("../blocks/cards.css");
 
 @import url("../blocks/footer.css");

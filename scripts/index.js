@@ -18,7 +18,7 @@ function openCardsModal() {
 btnAdd.addEventListener("click", openCardsModal);
 
 function openModal() {
-  profileModal.classList.remove("modal_closed");
+  profileModal.classList.add("modal_opened");
   nameInput.value = profileName.textContent;
   jobInput.value = profileJob.textContent;
 }
@@ -28,7 +28,7 @@ const profileModalCloseButton = profileModal.querySelector("#btn-close");
 const profileCardsModalCloseButton = profileCardsModal.querySelector("#cards-btn-close");
 
 function closeModal() {
-  profileModal.classList.add("modal_closed");
+  profileModal.classList.remove("modal_opened");
 }
 profileModalCloseButton.addEventListener("click", closeModal);
 

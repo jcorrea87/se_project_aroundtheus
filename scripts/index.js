@@ -67,14 +67,13 @@ const cardsFormElement = document.querySelector(".cards-form");
 
 const cardsTitleInput = document.querySelector(".cards-form__input-title");
 const cardsLinkInput = document.querySelector(".cards-form__input-link");
+const titleEntry = cardsTitleInput.value;
+const linkEntry = cardsLinkInput.value;
 
 function handleCardsFormSubmit(evt) {
   evt.preventDefault();
   const cardTemplate = document.querySelector("#card__template").content;
   const cardElement = cardTemplate.querySelector(".card").cloneNode(true);
-
-  const titleEntry = cardsTitleInput.value;
-  const linkEntry = cardsLinkInput.value;
 
   const cardImage = cardElement.querySelector(".card__picture");
   cardImage.src = linkEntry;

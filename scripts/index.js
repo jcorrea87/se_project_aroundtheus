@@ -116,7 +116,7 @@ function getCardElement(data) {
   }
   trashButton.addEventListener("click", deleteCard);
 
-  const imageButton = document.querySelector("#image-button");
+  const imageButton = cardElement.querySelector("#image-button");
   const modalClass = document.querySelector(".image-modal");
 
   function openImageModal() {

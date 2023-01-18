@@ -1,13 +1,13 @@
-.card{
-  position:relative;
+.card {
+  position: relative;
 }
 
-.card__image-button{
-  padding:0;
-  margin:0;
-  border:none;
-  border-radius:10px 10px 0 0;
-  display:block;
+.card__image-button {
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-radius: 10px 10px 0 0;
+  display: block;
 }
 
 .card__picture {
@@ -17,17 +17,17 @@
   display: flex;
 }
 
-.card__delete-button{
+.card__delete-button {
   background-image: url(../images/trash.svg);
-  border:none;
-  width:18px;
-  height:19.3px;
-  padding:0;
-  position:absolute;
-  top:18px;
-  right:15px;
-  background-size:cover;
-  background-repeat:no-repeat;
+  border: none;
+  width: 18px;
+  height: 19.3px;
+  padding: 0;
+  position: absolute;
+  top: 18px;
+  right: 15px;
+  background-size: cover;
+  background-repeat: no-repeat;
   background-color: transparent;
 }
 
@@ -78,15 +78,15 @@
   cursor: pointer;
 }
 
-.card__like-button_active{
+.card__like-button_active {
   background-image: url(../images/heart-active.svg);
-  opacity:1;
-  transition: opacity 1s linear .25s;
-  animation-fill-mode:forwards;
+  opacity: 1;
+  transition: opacity 1s linear 0.25s;
+  animation-fill-mode: forwards;
 }
 
-.card__like-button_active:active{
-  opacity:1;
+.card__like-button_active:active {
+  opacity: 1;
 }
 
 @media screen and (max-width: 880px) {

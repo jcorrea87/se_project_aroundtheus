@@ -72,7 +72,7 @@ function handleCardsFormSubmit(evt) {
   evt.preventDefault();
   const titleEntry = cardsTitleInput.value;
   const linkEntry = cardsLinkInput.value;
-  const newCard = getCardElement({name: titleEntry, link: linkEntry});
+  const newCard = getCardElement({ name: titleEntry, link: linkEntry });
   const cardTemplate = document.querySelector("#card__template").content;
   const cardElement = cardTemplate.querySelector(".card").cloneNode(true);
 
@@ -86,7 +86,6 @@ function handleCardsFormSubmit(evt) {
   cardsContainer.prepend(newCard);
 
   closeCardsModal();
-
 }
 
 cardsFormElement.addEventListener("submit", handleCardsFormSubmit);
@@ -111,7 +110,7 @@ function getCardElement(data) {
   });
 
   const trashButton = cardElement.querySelector(".card__delete-button");
-  function deleteCard(){
+  function deleteCard() {
     cardElement.remove();
   }
   trashButton.addEventListener("click", deleteCard);
@@ -121,6 +120,11 @@ function getCardElement(data) {
 
   function openImageModal() {
     modalClass.classList.add("image-modal_opened");
+    const modalImage = document.querySelector(".image-modal__image");
+    modalImage.src = data.link;
+    modalImage.alt = data.name;
+    const modalTitle = document.querySelector(".image-modal__caption");
+    modalTitle.textContent = data.name;
   }
   imageButton.addEventListener("click", openImageModal);
 
@@ -131,34 +135,12 @@ function getCardElement(data) {
   }
   imageCloseButton.addEventListener("click", closeImageModal);
 
-  const modalImage = document.querySelector(".image-modal__image");
-  modalImage.src = data.link;
-  modalImage.alt = data.name;
-  const modalTitle = document.querySelector(".image-modal__caption");
-  modalTitle.textContent = data.name;
-
   return cardElement;
 }
 
-initialCards.forEach(function(item) {
+initialCards.forEach(function (item) {
   const card = getCardElement(item);
 
   const cardsContainer = document.querySelector(".cards");
   cardsContainer.append(card);
 });
-/*
-const imageButton = document.querySelector("#image-button");
-const modalClass = document.querySelector(".image-modal");
-
-function openImageModal() {
-  modalClass.classList.remove("image-modal_closed");
-}
-imageButton.addEventListener("click", openImageModal);
-
-const imageCloseButton = document.querySelector("#image-btn-close");
-
-function closeImageModal() {
-  modalClass.classList.add("image-modal_closed");
-}
-imageCloseButton.addEventListener("click", closeImageModal);
-*/

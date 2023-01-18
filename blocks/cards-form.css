@@ -49,7 +49,7 @@
   font-style:normal;
   font-weight: 400;
   font-size:14px;
-  line-height:17px;
+  line-height:1.21;
 }
 
 .cards-form__save-button {
@@ -71,19 +71,17 @@
 }
 
 @media screen and (max-width: 580px) {
-  .cards-form__input-name {
+  .cards-form__input-title {
     margin: 0 22px 30px 22px;
-    font-size: 14px;
   }
-  .cards-form__input-description {
+  .cards-form__input-link {
     margin: 0 22px 0 22px;
-    font-size: 14px;
   }
 
   .cards-form__save-button {
     width: 238px;
     height: 45px;
     margin: 45px 22px 25px 22px;
-    background-size: 38px 18px;
+    background-size: 45px 17px;
   }
 }

@@ -73,17 +73,11 @@ function handleCardsFormSubmit(evt) {
   const titleEntry = cardsTitleInput.value;
   const linkEntry = cardsLinkInput.value;
   const newCard = getCardElement({ name: titleEntry, link: linkEntry });
-  const cardTemplate = document.querySelector("#card__template").content;
-  const cardElement = cardTemplate.querySelector(".card").cloneNode(true);
-
-  const cardImage = cardElement.querySelector(".card__picture");
-  cardImage.src = linkEntry;
-  cardImage.alt = titleEntry;
-  const cardTitle = cardElement.querySelector(".card__heading");
-  cardTitle.textContent = titleEntry;
 
   const cardsContainer = document.querySelector(".cards");
   cardsContainer.prepend(newCard);
+
+  document.getElementById("cards-form").reset();
 
   closeCardsModal();
 }
@@ -116,10 +110,10 @@ function getCardElement(data) {
   trashButton.addEventListener("click", deleteCard);
 
   const imageButton = cardElement.querySelector("#image-button");
-  const modalClass = document.querySelector(".image-modal");
+  const imageModal = document.querySelector(".image-modal");
 
   function openImageModal() {
-    modalClass.classList.add("image-modal_opened");
+    imageModal.classList.add("image-modal_opened");
     const modalImage = document.querySelector(".image-modal__image");
     modalImage.src = data.link;
     modalImage.alt = data.name;
@@ -131,7 +125,7 @@ function getCardElement(data) {
   const imageCloseButton = document.querySelector("#image-btn-close");
 
   function closeImageModal() {
-    modalClass.classList.remove("image-modal_opened");
+    imageModal.classList.remove("image-modal_opened");
   }
   imageCloseButton.addEventListener("click", closeImageModal);
 

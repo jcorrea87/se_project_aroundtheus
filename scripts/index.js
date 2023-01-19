@@ -12,7 +12,6 @@ const cardsModal = document.querySelector(".cards-modal");
 const imageModal = document.querySelector(".image-modal");
 const buttonEdit = document.querySelector("#button-edit");
 const buttonAdd = document.querySelector("#add-button");
-/*const buttonImage = cardElement.querySelector("#image-button");*/
 const imageCloseButton = document.querySelector("#image-button-close");
 const profileCloseButton = profileModal.querySelector("#button-close");
 const cardsCloseButton = cardsModal.querySelector("#cards-button-close");
@@ -68,11 +67,11 @@ function makeImageModal(data) {
   modalImage.alt = data.name;
   const modalTitle = document.querySelector(".image-modal__caption");
   modalTitle.textContent = data.name;
+  makeImageModal();
 }
 
-const cardDivider= document.querySelector(".card");
-function deleteCard() {
-  cardDivider.remove();
+function deleteCard(evt) {
+  evt.target.closest(".card").remove();
 }
 
 function getCardElement(data) {
@@ -100,7 +99,6 @@ function getCardElement(data) {
   const buttonImage = cardElement.querySelector("#image-button");
 
   buttonImage.addEventListener("click", () => {
-    makeImageModal();
     openModal(imageModal);
   });
 

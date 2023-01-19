@@ -102,17 +102,29 @@ function getCardElement(data) {
     modal.classList.add(".modal_opened");
   }
 
-  buttonEdit.addEventListener("click", openModal);
-  buttonAdd.addEventListener("click", openModal);
-  buttonImage.addEventListener("click", openModal);
+  buttonEdit.addEventListener("click", () => {
+    openModal(profileModal);
+  });
+  buttonAdd.addEventListener("click", () => {
+    openModal(cardsModal);
+  });
+  buttonImage.addEventListener("click", () => {
+    openModal(imageModal);
+  });
 
   function closeModal(modal){
     modal.classList.remove(".modal_opened");
   }
 
-  profileCloseButton.addEventListener("click", closeModal);
-  cardsCloseButton.addEventListener("click", closeModal);
-  imageCloseButton.addEventListener("click", closeModal);
+  profileCloseButton.addEventListener("click", () => {
+    closeModal(profileModal);
+  });
+  cardsCloseButton.addEventListener("click", () => {
+    closeModal(cardsModal);
+  });
+  imageCloseButton.addEventListener("click", () => {
+    closeModal(imageModal);
+  });
 
   return cardElement;
 }

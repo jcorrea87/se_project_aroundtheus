@@ -30,7 +30,6 @@ const cardsLinkInput = document.querySelector(".cards-form__input-link");
 /* */
 
 function openModalProfile() {
-  openModal(profileModal);
   nameInput.value = profileName.textContent;
   jobInput.value = profileJob.textContent;
 }
@@ -91,8 +90,7 @@ function getCardElement(data) {
 
   const buttonImage = cardElement.querySelector("#image-button");
 
-  function openImageModal() {
-    openModal(imageModal);
+  function makeImageModal() {
     const modalImage = document.querySelector(".image-modal__image");
     modalImage.src = data.link;
     modalImage.alt = data.name;

@@ -22,12 +22,11 @@ const nameInput = document.querySelector(".form__input-name");
 const jobInput = document.querySelector(".form__input-description");
 const profileName = document.querySelector(".profile__name");
 const profileJob = document.querySelector(".profile__description");
-profileFormElement.addEventListener("submit", handleProfileFormSubmit);
 /* */
 const cardsFormElement = document.querySelector(".cards-form");
 const cardsTitleInput = document.querySelector(".cards-form__input-title");
 const cardsLinkInput = document.querySelector(".cards-form__input-link");
-cardsFormElement.addEventListener("submit", handleCardsFormSubmit);
+
 /* */
 
 function openModalProfile() {
@@ -45,7 +44,8 @@ function handleProfileFormSubmit(evt) {
   profileName.textContent = nameEntry;
   profileJob.textContent = jobEntry;
 
-  closeModal();
+  closeModal(profileModal);
+  profileFormElement.addEventListener("submit", handleProfileFormSubmit);
 }
 
 function handleCardsFormSubmit(evt) {
@@ -59,8 +59,10 @@ function handleCardsFormSubmit(evt) {
 
   document.getElementById("cards-form").reset();
 
-  closeModal();
+  closeModal(cardsModal);
+  cardsFormElement.addEventListener("submit", handleCardsFormSubmit);
 }
+
 
 function getCardElement(data) {
 
@@ -99,7 +101,7 @@ function getCardElement(data) {
   }
 
   function openModal(modal){
-    modal.classList.add(".modal_opened");
+    modal.classList.add("modal_opened");
   }
 
   buttonEdit.addEventListener("click", () => {
@@ -113,7 +115,7 @@ function getCardElement(data) {
   });
 
   function closeModal(modal){
-    modal.classList.remove(".modal_opened");
+    modal.classList.remove("modal_opened");
   }
 
   profileCloseButton.addEventListener("click", () => {

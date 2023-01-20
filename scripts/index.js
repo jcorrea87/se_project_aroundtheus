@@ -67,7 +67,7 @@ function makeImageModal(data) {
   modalImage.alt = data.name;
   const modalTitle = document.querySelector(".image-modal__caption");
   modalTitle.textContent = data.name;
-  makeImageModal();
+  openModal(imageModal);
 }
 
 function deleteCard(evt) {
@@ -75,7 +75,6 @@ function deleteCard(evt) {
 }
 
 function getCardElement(data) {
-
   const cardTemplate = document.querySelector("#card__template").content;
 
   const cardElement = cardTemplate.querySelector(".card").cloneNode(true);
@@ -97,11 +96,10 @@ function getCardElement(data) {
   trashButton.addEventListener("click", deleteCard);
 
   const buttonImage = cardElement.querySelector("#image-button");
-
   buttonImage.addEventListener("click", () => {
+    makeImageModal(data);
     openModal(imageModal);
   });
-
   return cardElement;
 }
 
@@ -112,7 +110,7 @@ initialCards.forEach(function (item) {
   cardsContainer.append(card);
 });
 
-function openModal(modal){
+function openModal(modal) {
   modal.classList.add("modal_opened");
 }
 
@@ -123,7 +121,7 @@ buttonAdd.addEventListener("click", () => {
   openModal(cardsModal);
 });
 
-function closeModal(modal){
+function closeModal(modal) {
   modal.classList.remove("modal_opened");
 }
 

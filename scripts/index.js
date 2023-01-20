@@ -7,8 +7,8 @@ const initialCards = [
   { name: "Lago di Braies", link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/lago.jpg" },
 ];
 
-const profileModal = document.querySelector(".modal");
-const cardsModal = document.querySelector(".cards-modal");
+const profileModal = document.querySelector("#modal-divider");
+const cardsModal = document.querySelector("#cards-modal-divider");
 const imageModal = document.querySelector(".image-modal");
 const buttonEdit = document.querySelector("#button-edit");
 const buttonAdd = document.querySelector("#add-button");
@@ -16,15 +16,15 @@ const imageCloseButton = document.querySelector("#image-button-close");
 const profileCloseButton = profileModal.querySelector("#button-close");
 const cardsCloseButton = cardsModal.querySelector("#cards-button-close");
 /* */
-const profileFormElement = document.querySelector(".form");
-const nameInput = document.querySelector(".form__input-name");
-const jobInput = document.querySelector(".form__input-description");
-const profileName = document.querySelector(".profile__name");
-const profileJob = document.querySelector(".profile__description");
+const profileFormElement = document.querySelector("#profile-form");
+const nameInput = document.querySelector("#input-name");
+const jobInput = document.querySelector("#input-description");
+const profileName = document.querySelector("#profile-heading");
+const profileJob = document.querySelector("#profile-description");
 /* */
-const cardsFormElement = document.querySelector(".cards-form");
-const cardsTitleInput = document.querySelector(".cards-form__input-title");
-const cardsLinkInput = document.querySelector(".cards-form__input-link");
+const cardsFormElement = document.querySelector("#cards-form");
+const cardsTitleInput = document.querySelector("#input-cards-title");
+const cardsLinkInput = document.querySelector("#input-cards-link");
 
 /* */
 

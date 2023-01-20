@@ -98,7 +98,6 @@ function getCardElement(data) {
   const buttonImage = cardElement.querySelector("#image-button");
   buttonImage.addEventListener("click", () => {
     makeImageModal(data);
-    openModal(imageModal);
   });
   return cardElement;
 }

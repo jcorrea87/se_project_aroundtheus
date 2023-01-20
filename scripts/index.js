@@ -9,7 +9,7 @@ const initialCards = [
 
 const profileModal = document.querySelector("#modal-divider");
 const cardsModal = document.querySelector("#cards-modal-divider");
-const imageModal = document.querySelector(".image-modal");
+const imageModal = document.querySelector("#image-modal");
 const buttonEdit = document.querySelector("#button-edit");
 const buttonAdd = document.querySelector("#add-button");
 const imageCloseButton = document.querySelector("#image-button-close");

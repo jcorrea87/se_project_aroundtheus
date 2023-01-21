@@ -7,8 +7,8 @@ const initialCards = [
   { name: "Lago di Braies", link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/around-project/lago.jpg" },
 ];
 
-const profileModal = document.querySelector("#modal-divider");
-const cardsModal = document.querySelector("#cards-modal-divider");
+const profileModal = document.querySelector("#profile-modal");
+const cardsModal = document.querySelector("#card-modal");
 const imageModal = document.querySelector("#image-modal");
 const buttonEdit = document.querySelector("#button-edit");
 const buttonAdd = document.querySelector("#add-button");
@@ -28,7 +28,7 @@ const cardsLinkInput = document.querySelector("#input-cards-link");
 
 /* */
 
-function openModalProfile() {
+function fillProfileForm() {
   nameInput.value = profileName.textContent;
   jobInput.value = profileJob.textContent;
 }
@@ -114,6 +114,7 @@ function openModal(modal) {
 }
 
 buttonEdit.addEventListener("click", () => {
+  fillProfileForm();
   openModal(profileModal);
 });
 buttonAdd.addEventListener("click", () => {

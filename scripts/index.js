@@ -25,6 +25,10 @@ const profileJob = document.querySelector("#profile-description");
 const cardsFormElement = document.querySelector("#cards-form");
 const cardsTitleInput = document.querySelector("#input-cards-title");
 const cardsLinkInput = document.querySelector("#input-cards-link");
+/* */
+const modalOuter = document.querySelector(".modal")
+const imageModalOuter = document.querySelector(".image-modal")
+const cardModalOuter = document.querySelector("#card-modal")
 
 /* */
 
@@ -134,3 +138,42 @@ cardsCloseButton.addEventListener("click", () => {
 imageCloseButton.addEventListener("click", () => {
   closeModal(imageModal);
 });
+
+document.addEventListener("keydown", (event) => {
+  if(event.key === "Escape") {
+    closeModal(profileModal);
+  }
+})
+
+document.addEventListener("keydown", (event) => {
+  if(event.key === "Escape") {
+    closeModal(cardsModal);
+  }
+})
+
+document.addEventListener("keydown", (event) => {
+  if(event.key === "Escape") {
+    closeModal(imageModal);
+  }
+})
+
+modalOuter.addEventListener("click", function(event) {
+  const isOutside = !event.target.closest(".modal__container");
+  if (isOutside){
+    closeModal(profileModal);
+  }
+})
+
+cardModalOuter.addEventListener("click", function(event) {
+  const isOutside = !event.target.closest("#card-modal__container");
+  if (isOutside){
+    closeModal(cardsModal);
+  }
+})
+
+imageModalOuter.addEventListener("click", function(event) {
+  const isOutside = !event.target.closest(".image-modal__container");
+  if (isOutside){
+    closeModal(imageModal);
+  }
+})

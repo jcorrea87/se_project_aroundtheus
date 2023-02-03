@@ -14,13 +14,11 @@
 
 @import url("../blocks/image-modal.css");
 
-@import url("../blocks/input-name-error.css");
-
-@import url("../blocks/input-type-error.css");
-
 @import url("../blocks/modal.css");
 
 @import url("../blocks/page.css");
+
+@import url("../blocks/popup.css");
 
 @import url("../blocks/profile.css");
 

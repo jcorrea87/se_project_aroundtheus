@@ -20,6 +20,8 @@ const hideInputError = (formElement, inputElement) => {
 
 const setEventListener = (formElement) => {
   const inputList = Array.from(formElement.querySelectorAll(".popup__form"));
+  const buttonElement = formElement.querySelector(".popup__button");
+  toggleButtonState(inputList, buttonElement);
   inputList.forEach((inputElement) => {
     inputElement.addEVentListener("input", () => {
       isValid(formElement, inputElement)
@@ -37,6 +39,27 @@ const enableValidation = () => {
     setEventListener(formElement);
   });
 };
+
+const hasInvalidInput = (inputList) => {
+  return inputList.some((inputElement) => {
+    return !inputElement.validity.valid;
+  })
+};
+
+const toggleButtonState = (inputList, buttonElement) => {
+  if (hasInvalidInput(inputList)){
+    buttonElement.classList.add("popup__button_disabled");
+  }else{
+    buttonElement.class.remove("popup__button_disabled");
+  }
+};
+
+inputList.forEach((inputElement) => {
+  inputElement.addEventListener("input", () => {
+    isValid(formElement, inputElement);
+    toggleButtonState(inputList, buttonElement);
+  });
+});
 
 enableValidation({
   formSelector: ".popup__form",

@@ -24,12 +24,12 @@
                 <h1 class="modal__heading">Edit profile</h1>
                 <form id="profile-form" class="form popup__form" novalidate>
                   <fieldset class="form__fieldset">
-                    <input id="input-name" class="form__input-name popup__input_type_error popup__input" type="text" placeholder="Name" minlength="2" maxlength="40" required />
-                    <span class="popup__error-message popup__error_visible">Please fill out this field.</span>
-                    <input id="input-description" class="form__input-description popup__input_type_error popup__input" type="text" placeholder="Description" minlength="2" maxlength="200" required />
-                    <span class="popup__error-message popup__error_visible">Please fill out this field.</span>
+                    <input id="input-name" class="form__input-name popup__input" type="text" placeholder="Name" minlength="2" maxlength="40" required />
+                    <span id="input-name-error" class="popup__error-message popup__input-error">Please fill out this field.</span>
+                    <input id="input-description" class="form__input-description popup__input" type="text" placeholder="Description" minlength="2" maxlength="200" required />
+                    <span id="input-description-error"class="popup__error-message popup__input-error">Please fill out this field.</span>
                   </fieldset>
-                  <button class="form__save-button popup__button_disabled popup__button" type="submit">Save</button>
+                  <button class="form__save-button popup__button" type="submit">Save</button>
                 </form>
                 <button id="button-close" class="modal__close-button" type="button"></button>
               </div>
@@ -57,12 +57,12 @@
             <h1 class="modal__heading">New Place</h1>
             <form id="cards-form" class="form popup__form" novalidate>
               <fieldset class="form__fieldset">
-                <input id="input-cards-title" class="form__input-name popup__input_type_error popup__input" type="text" placeholder="Title" minlength="1" maxlength="30" required />
-                <span class="popup__error-message popup__error_visible">Please fill out this field.</span>
-                <input id="input-cards-link" class="form__input-description popup__input_type_error popup__input" type="URL" placeholder="Image link" required />
-                <span class="popup__error-message popup__error_visible">Please enter a web address.</span>
+                <input id="input-cards-title" class="form__input-name popup__input" type="text" placeholder="Title" minlength="1" maxlength="30" required />
+                <span id="input-cards-title-error" class="popup__error-message popup__input-error">Please fill out this field.</span>
+                <input id="input-cards-link" class="form__input-description popup__input" type="URL" placeholder="Image link" required />
+                <span id="input-cards-link-error" class="popup__error-message popup__input-error">Please enter a web address.</span>
               </fieldset>
-              <button class="form__save-button popup__button_disabled popup__button" type="submit">Create</button>
+              <button class="form__save-button popup__button" type="submit">Create</button>
             </form>
             <button id="cards-button-close" class="modal__close-button" type="button"></button>
           </div>
